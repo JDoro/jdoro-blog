@@ -2,9 +2,7 @@
 title: JDoro.out.print(blog)
 ---
 
-This will be a blog to post some of my ideas and feelings on the software. 
-I've been working and writing in this space for over a decade, and I'm 
-excited to finally share some of my thoughts and get them out of my head.
+This will be a blog to post some of my ideas and feelings on the software.
 
 ## Introduction to me
 Howdy!
