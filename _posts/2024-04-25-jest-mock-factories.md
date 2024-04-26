@@ -34,7 +34,7 @@ provide a factory function like:
 
 ```jsx
 jest.mock('module', () => ({
-	foo: jest.fn(),
+  foo: jest.fn(),
   bar: jest.fn()
 }));
 ```
