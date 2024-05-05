@@ -3,7 +3,7 @@ title: "May the 4th Be with you!"
 date: 2024-05-04
 ---
 
-![May the 4th Be with you!]({{BASE_PATH }}/assets/images/star-wars.png)
+![May the 4th Be with you!](/assets/images/star-wars.png)
 
 This is one of my favorite days of the year! I've been a massive Star Wars fan 
 my entire life. I remember watching the original trilogy with my mom when I was
