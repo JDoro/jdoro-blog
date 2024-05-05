@@ -3,11 +3,7 @@ title: "May the 4th Be with you!"
 date: 2024-05-04
 ---
 
-<div style="display: flex;justify-content: center">
-
 ![May the 4th Be with you!](/assets/images/star-wars.png)
-
-</div>
 
 This is one of my favorite days of the year! I've been a massive Star Wars fan 
 my entire life. I remember watching the original trilogy with my mom when I was
