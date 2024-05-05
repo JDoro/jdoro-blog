@@ -3,8 +3,6 @@ title: "Testing With Dependency Injection"
 date: 2024-05-02
 ---
 
-## Demystifying Dependency Injection: Cleaner Code, Easier Testing
-
 Dependency injection (DI) is a software design pattern that might sound complex, 
 but it's a powerful tool for writing cleaner, more maintainable code. At its core, 
 DI is about separating the creation of an object from its usage. This might seem 
