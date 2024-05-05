@@ -4,7 +4,9 @@ date: 2024-05-04
 ---
 
 <div style="display: flex;justify-content: center">
-    <img alt="May the 4th Be with you!" src="/assets/images/star-wars.png"/>
+
+![May the 4th Be with you!](/assets/images/star-wars.png)
+
 </div>
 
 This is one of my favorite days of the year! I've been a massive Star Wars fan 
