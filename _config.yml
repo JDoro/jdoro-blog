@@ -4,18 +4,6 @@ author:
     email: "josh.j.doro@gmail.com"
 plugins:
     - jekyll-feed
-    - jekyll-seo-tag
-    - jekyll-sitemap
-    - jekyll-paginate
-    - jekyll-redirect-from
-    - jekyll-archives
-    - jekyll-remote-theme
-    - jekyll-gist
-    - jekyll-avatar
-    - jekyll-include-cache
-    - jekyll-optional-front-matter
-    - jekyll-default-layout
-    - jekyll-readme-index
 remote_theme: jekyll/minima
 baseurl: /jdoro-blog
 minima:
