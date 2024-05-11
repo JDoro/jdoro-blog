@@ -1,7 +1,6 @@
 title: JDoro.out.print(blog)
 author: JDoro
 theme: minima
-  skin: dark
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
