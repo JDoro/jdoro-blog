@@ -2,3 +2,5 @@ title: JDoro.out.print(blog)
 author: JDoro
 remote_theme: jekyll/minima
 baseurl: /jdoro-blog
+minima:
+    skin: dark
