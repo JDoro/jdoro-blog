@@ -1,5 +1,5 @@
 ---
-title: "Render props for reusable component logic in React
+title: "Render props for reusable component logic in React"
 date: 2024-05-08
 ---
 
