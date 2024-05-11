@@ -1,14 +1,4 @@
 title: JDoro.out.print(blog)
 author: JDoro
-theme: minima
-plugins:
-  - jekyll-feed
-  - jekyll-seo-tag
-  - jekyll-sitemap
-  - jekyll-paginate
-  - jekyll-archives
-  - jekyll-redirect-from
-  - jekyll-gist
-  - jekyll-include-cache
-  - jekyll-remote-theme
+remote_theme: jekyll/minima
 baseurl: /jdoro-blog
