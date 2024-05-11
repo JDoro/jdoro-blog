@@ -3,4 +3,4 @@ author: JDoro
 remote_theme: jekyll/minima
 baseurl: /jdoro-blog
 minima:
-    skin: dark
+    skin: solarized
