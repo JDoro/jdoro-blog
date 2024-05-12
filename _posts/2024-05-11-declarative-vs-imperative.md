@@ -42,6 +42,42 @@ These two programming paradigms fall on opposite sides of the spectrum:
 - state changes. Code can become more verbose due to the focus on how 
 - objects interact.
 
+## Examples
+
+**Imperative (Step-by-Step) Approach:**
+
+```javascript
+// Create an empty array
+const numbers = [];
+
+// Add elements to the array one by one (imperative instructions)
+numbers.push(5);
+numbers.push(10);
+numbers.push(15);
+
+// Filter even numbers (imperative loop)
+const evenNumbers = [];
+for (let i = 0; i < numbers.length; i++) {
+  if (numbers[i] % 2 === 0) {
+    evenNumbers.push(numbers[i]);
+  }
+}
+```
+
+This code explicitly creates an empty array, adds elements one by one, and then uses a loop to filter even numbers with additional instructions.
+
+**Declarative (Desired State) Approach:**
+
+```javascript
+// Define an array of numbers
+const numbers = [5, 10, 15, 20];
+
+// Filter even numbers using declarative function (filter)
+const evenNumbers = numbers.filter(number => number % 2 === 0);
+```
+
+Here, we define the array directly. Then, we use the built-in `filter` function to achieve the desired outcome (finding even numbers) in a single line. The function itself handles the logic of iterating through the array.
+
 ## Choosing the Right Paradigm
 
 The best approach depends on the specific problem you're trying to solve. 
