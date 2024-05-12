@@ -21,11 +21,11 @@ In programming, we have two main approaches to achieve a desired outcome:
 imperative and declarative. The key distinction lies in how we instruct the 
 computer to get there.
 
--**Imperative code** focuses on the "how" - it dictates the step-by-step 
+- **Imperative code** focuses on the "how" - it dictates the step-by-step 
 instructions the computer needs to follow. Think of it as a recipe that 
 meticulously details each action required to bake a cake.
 
--**Declarative code**, on the other hand, emphasizes the "what" - it 
+- **Declarative code**, on the other hand, emphasizes the "what" - it 
 specifies the desired end state without outlining the exact steps. It's like 
 telling someone you want a cake, and they handle the baking process.
 
