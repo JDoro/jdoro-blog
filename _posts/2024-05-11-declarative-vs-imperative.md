@@ -34,13 +34,13 @@ telling someone you want a cake, and they handle the baking process.
 These two programming paradigms fall on opposite sides of the spectrum:
 
 - **Functional programming** is inherently more declarative. It emphasizes 
-- functions that transform data without altering external state. Code tends 
-- to be cleaner, more concise, and easier to reason about.
+functions that transform data without altering external state. Code tends 
+to be cleaner, more concise, and easier to reason about.
 
 - **Object-oriented programming (OOP)** leans towards the imperative side. 
-- OOP relies on objects that encapsulate data and behavior, often involving 
-- state changes. Code can become more verbose due to the focus on how 
-- objects interact.
+OOP relies on objects that encapsulate data and behavior, often involving 
+state changes. Code can become more verbose due to the focus on how 
+objects interact.
 
 ## Examples
 
