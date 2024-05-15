@@ -1,6 +1,6 @@
 ---
 title: "Lets Talk Declarative vs Imperative"
-date: 2024-05-08
+date: 2024-05-11
 ---
 
 Have you ever struggled to decipher a complex block of code? Or maybe 
