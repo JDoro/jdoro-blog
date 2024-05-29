@@ -73,9 +73,9 @@ However, profiling showed minimal improvement. This is because Jest still
 needs to build the module registry to understand the exposed interface it 
 needs to mock.
 2. **Manual Mocking (Success):**   introducing Jest's mock factory syntax 
-`jest.mock({{insert module path here}}, () => { return { foo: jest.func() } })`, allowing you to define specific mocks for each 
-dependency. This significantly reduced the module registry build time, as 
-seen in the profile comparison.
+`jest.mock({{insert module path here}}, () => { return { foo: jest.func() } })`, 
+allowing you to define specific mocks for each dependency. This significantly 
+reduced the module registry build time, as seen in the profile comparison.
 
 <div style="display: flex;justify-content: center">
     <img alt="Profile Output Showing Improved Tests" 
