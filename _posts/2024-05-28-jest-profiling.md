@@ -67,12 +67,13 @@ One of Jest's strengths is built-in mocking, but it comes at a cost. Jest
 rebuilds the module registry for every test suite. To minimize this overhead, 
 you implemented two mocking strategies:
 
-1. **Isolating Dependencies (Failed):** Initially, you used Jest's `jest.mock` 
-syntax to auto-mock dependencies. However, profiling showed minimal 
-improvement. This is because Jest still needs to build the module registry to 
-understand the exposed interface it needs to mock.
-2. **Manual Mocking (Success):** You switched to Jest's mock factory 
-syntax (`jest.mock(...)`), allowing you to define specific mocks for each 
+1. **Isolating Dependencies (Failed):** Initially, lets try Jest's 
+`jest.mock({{insert module path here}})` syntax to auto-mock dependencies. 
+However, profiling showed minimal improvement. This is because Jest still 
+needs to build the module registry to understand the exposed interface it 
+needs to mock.
+2. **Manual Mocking (Success):**   introducing Jest's mock factory syntax 
+`jest.mock({{insert module path here}}, () => { return { foo: jest.func() } })`, allowing you to define specific mocks for each 
 dependency. This significantly reduced the module registry build time, as 
 seen in the profile comparison.
 
@@ -86,17 +87,17 @@ circles have shrunk, indicating a faster test setup and module registry.
 
 ## Beyond Mocking: Test Efficiency
 
-While mocking helped, you also identified another performance pitfall: 
+While mocking helped, another performance pitfall was identified: 
 bringing in unnecessary dependencies just for testing.  Focusing on writing 
 lean, efficient tests that target the core functionality can further improve 
 performance.
 
 ## Results and Conclusion
 
-By applying these techniques to the slowest tests, you were able to cut the 
-execution time from six minutes to two minutes – a significant improvement. 
-As you extend these optimizations across the codebase, the test suite 
-runtime is expected to drop to a much faster 30 seconds.
+By applying these techniques to the slowest tests, the execution time was
+cut from six minutes to two minutes – a significant improvement. As you 
+extend these optimizations across the codebase, the test suite runtime is 
+expected to drop to a much faster 30 seconds.
 
 ## Additional Tips:
 
@@ -108,17 +109,3 @@ Remember, well-performing tests provide valuable feedback and keep
 development cycles efficient. By understanding Jest's behavior on Windows 
 and implementing these optimization techniques, you can achieve a 
 blazing-fast testing experience.
-
-## Improvements:
-
-- **Clearer Title:** The title highlights the specific benefit for Windows users.
-- **Structured Approach:** The problem, solution, and results are presented 
-in a clear sequence.
-- **Step-by-Step Guide:** The profiling steps are presented as a numbered 
-list for easy reference. 
-- **Explanation and Context:** The reasons behind each step and the 
-concepts involved are explained.
-- **Additional Tips:** The post concludes with suggestions for further 
-exploration.
-- **Removed Images:** As the content describes the images, they are no 
-longer necessary. 
