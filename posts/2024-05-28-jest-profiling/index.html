@@ -1,0 +1,42 @@
+<!doctype html><html lang=en><head><meta charset=UTF-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Optimizing Jest Tests for Blazing Fast Feedback on Windows</title><link rel=stylesheet href=/css/main.css></head><body class="bg-gray-50 text-gray-900 min-h-screen flex flex-col dark:bg-gray-900 dark:text-gray-100"><header class="bg-white shadow mb-8 dark:bg-gray-800 dark:shadow-lg"><div class="container mx-auto px-4 py-6 flex items-center justify-between"><a href=/ class="text-3xl font-bold text-blue-600 hover:text-blue-800 transition dark:text-blue-400 dark:hover:text-blue-200">JDORO.println</a>
+<button id=dark-toggle class="ml-4 px-3 py-1 rounded bg-gray-200 text-gray-800 dark:bg-gray-700 dark:text-gray-100 focus:outline-none transition">
+<span id=dark-toggle-text>🌙 Dark</span></button></div></header><main class="flex-1 container mx-auto px-4 py-8 bg-white rounded-lg shadow-md dark:bg-gray-800 dark:shadow-lg"><div class="max-w-2xl mx-auto py-8 px-4"><article class="prose prose-slate dark:prose-invert"><h1 class="text-3xl font-bold mb-4 dark:text-gray-100">Optimizing Jest Tests for Blazing Fast Feedback on Windows</h1><div class="flex items-center text-gray-500 text-sm space-x-4 mb-8 dark:text-gray-400"><span>May 28, 2024</span></div><p>Jest has become a popular testing framework for JavaScript applications,
+especially those built with React. While it shines on macOS and Linux,
+Windows users can sometimes encounter significant slowdowns. This post
+details how to identify performance bottlenecks in Jest tests on Windows
+and shares techniques to achieve lightning-fast feedback.</p><h2 id=the-problem-slow-tests-on-windows>The Problem: Slow Tests on Windows</h2><p>You recently joined a React project and were met with a six-minute wait for
+Jest test results – unacceptable for a smooth development workflow. The
+project, primarily developed on macOS, had only 300 test suites and around
+1,000 individual tests. Investigating further revealed this slowness is a
+known issue for Jest on Windows.</p><h2 id=solution-profiling-and-mocking>Solution: Profiling and Mocking</h2><p>To pinpoint the bottlenecks, you leveraged Node&rsquo;s built-in profiling
+capabilities via Chrome DevTools. Here&rsquo;s a step-by-step guide on how to
+profile Jest tests using Chrome DevTools:</p><ol><li><strong>Run Jest with Debug Mode:</strong> Pass the <code>-inspect-brk</code> argument to the
+<code>node</code> command when running Jest. This puts the tests in debug mode,
+pausing at the first line.</li><li><strong>Open Chrome DevTools:</strong> Navigate to <code>chrome://inspect/</code> in Chrome
+and locate the Jest process under &ldquo;Target.&rdquo; Click &ldquo;inspect&rdquo; to open the
+developer tools window for the Jest process.</li></ol><ol start=3><li><strong>Start Profiling:</strong> In the DevTools window, go to the &ldquo;Profiles&rdquo; tab and
+click &ldquo;Start.&rdquo;</li></ol><ol start=4><li><strong>Run the Tests:</strong> Monitor the terminal where Jest is running. Once the
+tests finish, switch back to DevTools and click &ldquo;Stop&rdquo; in the Profiles tab.</li></ol><h2 id=analyzing-the-profile>Analyzing the Profile</h2><p>The initial profile revealed two key areas:</p><ul><li><strong>Jest Setup (Red Circle):</strong> This section represents Jest&rsquo;s internal setup
+and is unaffected by your code.</li><li><strong>Module Registry (Blue Circle):</strong> This part reflects Jest building the
+module registry for each test suite. It traverses the dependency tree of
+every imported file, which can be time-consuming.</li></ul><h2 id=mocking-to-the-rescue>Mocking to the Rescue</h2><p>One of Jest&rsquo;s strengths is built-in mocking, but it comes at a cost. Jest
+rebuilds the module registry for every test suite. To minimize this overhead,
+you implemented two mocking strategies:</p><ol><li><strong>Isolating Dependencies (Failed):</strong> Initially, lets try Jest&rsquo;s
+<code>jest.mock({{insert module path here}})</code> syntax to auto-mock dependencies.
+However, profiling showed minimal improvement. This is because Jest still
+needs to build the module registry to understand the exposed interface it
+needs to mock.</li><li><strong>Manual Mocking (Success):</strong> introducing Jest&rsquo;s mock factory syntax
+<code>jest.mock({{insert module path here}}, () => { return { foo: jest.func() } })</code>,
+allowing you to define specific mocks for each dependency. This significantly
+reduced the module registry build time, as seen in the profile comparison.</li></ol><p>Now you can see, through the scale at the top, that both the red and blue
+circles have shrunk, indicating a faster test setup and module registry.</p><h2 id=beyond-mocking-test-efficiency>Beyond Mocking: Test Efficiency</h2><p>While mocking helped, another performance pitfall was identified:
+bringing in unnecessary dependencies just for testing. Focusing on writing
+lean, efficient tests that target the core functionality can further improve
+performance.</p><h2 id=results-and-conclusion>Results and Conclusion</h2><p>By applying these techniques to the slowest tests, the execution time was
+cut from six minutes to two minutes – a significant improvement. As you
+extend these optimizations across the codebase, the test suite runtime is
+expected to drop to a much faster 30 seconds.</p><h2 id=additional-tips>Additional Tips:</h2><ul><li>Consider using a test runner like <code>jest-runner-rs</code> that leverages Rust for
+potentially faster execution.</li><li>Explore alternative mocking libraries like <code>sinon</code> for more granular control.</li></ul><p>Remember, well-performing tests provide valuable feedback and keep
+development cycles efficient. By understanding Jest&rsquo;s behavior on Windows
+and implementing these optimization techniques, you can achieve a
+blazing-fast testing experience.</p></article></div></main><footer class="mt-8 py-6 text-center text-gray-500 text-sm dark:text-gray-400">&copy; 2025 JDORO.println. Powered by <a href=https://gohugo.io/ class="text-blue-500 hover:underline dark:text-blue-300 dark:hover:text-blue-100">Hugo</a>.</footer><script>const body=document.documentElement,toggle=document.getElementById("dark-toggle"),toggleText=document.getElementById("dark-toggle-text");(localStorage.getItem("theme")==="dark"||!localStorage.getItem("theme")&&window.matchMedia("(prefers-color-scheme: dark)").matches)&&(body.classList.add("dark"),toggleText&&(toggleText.textContent="☀️ Light")),toggle.addEventListener("click",()=>{console.log("toggle"),body.classList.toggle("dark"),body.classList.contains("dark")?(localStorage.setItem("theme","dark"),toggleText.textContent="☀️ Light"):(localStorage.setItem("theme","light"),toggleText.textContent="🌙 Dark")})</script></body></html>

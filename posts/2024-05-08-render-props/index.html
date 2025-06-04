@@ -1,0 +1,64 @@
+<!doctype html><html lang=en><head><meta charset=UTF-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Render props for reusable component logic in React</title><link rel=stylesheet href=/css/main.css></head><body class="bg-gray-50 text-gray-900 min-h-screen flex flex-col dark:bg-gray-900 dark:text-gray-100"><header class="bg-white shadow mb-8 dark:bg-gray-800 dark:shadow-lg"><div class="container mx-auto px-4 py-6 flex items-center justify-between"><a href=/ class="text-3xl font-bold text-blue-600 hover:text-blue-800 transition dark:text-blue-400 dark:hover:text-blue-200">JDORO.println</a>
+<button id=dark-toggle class="ml-4 px-3 py-1 rounded bg-gray-200 text-gray-800 dark:bg-gray-700 dark:text-gray-100 focus:outline-none transition">
+<span id=dark-toggle-text>🌙 Dark</span></button></div></header><main class="flex-1 container mx-auto px-4 py-8 bg-white rounded-lg shadow-md dark:bg-gray-800 dark:shadow-lg"><div class="max-w-2xl mx-auto py-8 px-4"><article class="prose prose-slate dark:prose-invert"><h1 class="text-3xl font-bold mb-4 dark:text-gray-100">Render props for reusable component logic in React</h1><div class="flex items-center text-gray-500 text-sm space-x-4 mb-8 dark:text-gray-400"><span>May 8, 2024</span></div><p>Render props are a powerful design pattern in React that enables you to
+pass a function as a prop to a component. This function, often named
+<code>render</code>, dictates the content and rendering logic within the receiving
+component. This pattern shines in scenarios where you need to share
+common functionality while allowing customization of the visual presentation.</p><p>The render props pattern became popular with the
+<a href=https://github.com/downshift-js/downshift>Downshift</a> library, which
+provides a flexible way to build autocomplete components. By using render props,
+Downshift allows you to control the rendering logic while providing the necessary
+state and event handlers. This is a great example use case for render props.
+We want to reuse this logic across different components, but we also want to
+customize the rendering of the component based on our needs.</p><p>I&rsquo;d be glad to help you improve your blog post on render props in React!
+Here&rsquo;s a breakdown with filled-in sections and additional insights:</p><p>Render props are a powerful design pattern in React that enables you to
+pass a function as a prop to a component. This function, often named
+<code>render</code>, dictates the content and rendering logic within the receiving
+component. This pattern shines in scenarios where you need to share
+common functionality while allowing customization of the visual presentation.</p><p><strong>How Render Props Work:</strong></p><ol><li><strong>Passing the Render Prop:</strong> A parent component provides a function as
+a prop (usually named <code>render</code>) to a child component.</li><li><strong>Child Component Receives Prop:</strong> The child component receives the
+<code>render</code> function as a prop.</li><li><strong>Child Calls Render Prop:</strong> Inside the child component&rsquo;s <code>render</code>
+method, it invokes the received <code>render</code> function.</li><li><strong>Custom Rendering Based on Props:</strong> The <code>render</code> function typically
+receives additional props that allow it to customize the rendering output
+based on the child component&rsquo;s state or props.</li><li><strong>JSX Returned from Render Prop:</strong> The <code>render</code> function returns JSX
+elements or React nodes that define the child component&rsquo;s UI structure.</li></ol><p><strong>Example:</strong></p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript><span style=display:flex><span><span style=color:#75715e>// Parent Component (App.js)
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span><span style=color:#66d9ef>import</span> <span style=color:#a6e22e>MyCustomComponent</span> <span style=color:#a6e22e>from</span> <span style=color:#e6db74>&#39;./MyCustomComponent&#39;</span>;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>const</span> <span style=color:#a6e22e>App</span> <span style=color:#f92672>=</span> () =&gt; {
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>const</span> [<span style=color:#a6e22e>data</span>, <span style=color:#a6e22e>setData</span>] <span style=color:#f92672>=</span> <span style=color:#a6e22e>useState</span>(<span style=color:#e6db74>&#39;Initial data&#39;</span>);
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>return</span> (
+</span></span><span style=display:flex><span>    <span style=color:#f92672>&lt;</span><span style=color:#a6e22e>MyCustomComponent</span>
+</span></span><span style=display:flex><span>      <span style=color:#a6e22e>render</span><span style=color:#f92672>=</span>{(<span style=color:#a6e22e>props</span>) =&gt; (
+</span></span><span style=display:flex><span>        <span style=color:#f92672>&lt;</span><span style=color:#a6e22e>div</span><span style=color:#f92672>&gt;</span>
+</span></span><span style=display:flex><span>          <span style=color:#f92672>&lt;</span><span style=color:#a6e22e>p</span><span style=color:#f92672>&gt;</span><span style=color:#a6e22e>The</span> <span style=color:#a6e22e>data</span> <span style=color:#a6e22e>is</span><span style=color:#f92672>:</span> {<span style=color:#a6e22e>props</span>.<span style=color:#a6e22e>data</span>}<span style=color:#f92672>&lt;</span><span style=color:#960050;background-color:#1e0010>/p&gt;</span>
+</span></span><span style=display:flex><span>          <span style=color:#f92672>&lt;</span><span style=color:#a6e22e>button</span> <span style=color:#a6e22e>onClick</span><span style=color:#f92672>=</span>{() =&gt; <span style=color:#a6e22e>setData</span>(<span style=color:#e6db74>&#39;Updated data&#39;</span>)}<span style=color:#f92672>&gt;</span><span style=color:#a6e22e>Update</span> <span style=color:#a6e22e>Data</span><span style=color:#f92672>&lt;</span><span style=color:#960050;background-color:#1e0010>/button&gt;</span>
+</span></span><span style=display:flex><span>        <span style=color:#f92672>&lt;</span><span style=color:#960050;background-color:#1e0010>/div&gt;</span>
+</span></span><span style=display:flex><span>      )}
+</span></span><span style=display:flex><span>      <span style=color:#a6e22e>data</span><span style=color:#f92672>=</span>{<span style=color:#a6e22e>data</span>}
+</span></span><span style=display:flex><span>    <span style=color:#f92672>/&gt;</span>
+</span></span><span style=display:flex><span>  );
+</span></span><span style=display:flex><span>};
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e>// Child Component (MyCustomComponent.js)
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span><span style=color:#66d9ef>const</span> <span style=color:#a6e22e>MyCustomComponent</span> <span style=color:#f92672>=</span> ({ <span style=color:#a6e22e>render</span>, <span style=color:#a6e22e>data</span> }) =&gt; {
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>return</span> <span style=color:#a6e22e>render</span>({ <span style=color:#a6e22e>data</span> });
+</span></span><span style=display:flex><span>};
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>export</span> <span style=color:#66d9ef>default</span> <span style=color:#a6e22e>MyCustomComponent</span>;
+</span></span></code></pre></div><p>In this example, <code>App.js</code> provides a <code>render</code> prop function and the <code>data</code>
+prop to <code>MyCustomComponent.js</code>. The child component then renders the
+content and updates based on the provided props.</p><p><strong>Benefits of Render Props:</strong></p><ul><li><strong>Flexibility and Reusability:</strong> Render props promote code reuse by
+encapsulating common logic within the child component. Different parent
+components can customize the UI by providing their own <code>render</code> functions.</li><li><strong>Separation of Concerns:</strong> This pattern separates concerns by isolating
+rendering logic from component state management.</li><li><strong>Customizable Rendering:</strong> You gain fine-grained control over how the
+child component is rendered, making it suitable for complex UI requirements
+with varying appearances.</li></ul><p><strong>Drawbacks of Render Props:</strong></p><ul><li><strong>Increased Complexity:</strong> Compared to functional components or hooks,
+render props can introduce some level of complexity, especially for beginners.</li><li><strong>Potential for Verbosity:</strong> For simple rendering logic, render props might
+seem verbose compared to a straightforward JSX return statement.</li><li><strong>Consider Alternatives:</strong> In modern React, custom hooks often provide a
+more concise and composable approach for sharing functionality and
+achieving similar goals.</li></ul><p><strong>Conclusion:</strong></p><p>Render props remain a valuable technique in React&rsquo;s arsenal, particularly
+when dealing with complex UI scenarios or when separation of rendering
+concerns is critical. However, with the rise of custom hooks, it&rsquo;s important
+to evaluate the trade-offs and choose the most suitable approach for your
+specific use case.</p></article></div></main><footer class="mt-8 py-6 text-center text-gray-500 text-sm dark:text-gray-400">&copy; 2025 JDORO.println. Powered by <a href=https://gohugo.io/ class="text-blue-500 hover:underline dark:text-blue-300 dark:hover:text-blue-100">Hugo</a>.</footer><script>const body=document.documentElement,toggle=document.getElementById("dark-toggle"),toggleText=document.getElementById("dark-toggle-text");(localStorage.getItem("theme")==="dark"||!localStorage.getItem("theme")&&window.matchMedia("(prefers-color-scheme: dark)").matches)&&(body.classList.add("dark"),toggleText&&(toggleText.textContent="☀️ Light")),toggle.addEventListener("click",()=>{console.log("toggle"),body.classList.toggle("dark"),body.classList.contains("dark")?(localStorage.setItem("theme","dark"),toggleText.textContent="☀️ Light"):(localStorage.setItem("theme","light"),toggleText.textContent="🌙 Dark")})</script></body></html>

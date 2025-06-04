@@ -1,0 +1,78 @@
+<!doctype html><html lang=en><head><meta charset=UTF-8><meta name=viewport content="width=device-width,initial-scale=1"><title>React Best Practices: Immutability</title><link rel=stylesheet href=/css/main.css></head><body class="bg-gray-50 text-gray-900 min-h-screen flex flex-col dark:bg-gray-900 dark:text-gray-100"><header class="bg-white shadow mb-8 dark:bg-gray-800 dark:shadow-lg"><div class="container mx-auto px-4 py-6 flex items-center justify-between"><a href=/ class="text-3xl font-bold text-blue-600 hover:text-blue-800 transition dark:text-blue-400 dark:hover:text-blue-200">JDORO.println</a>
+<button id=dark-toggle class="ml-4 px-3 py-1 rounded bg-gray-200 text-gray-800 dark:bg-gray-700 dark:text-gray-100 focus:outline-none transition">
+<span id=dark-toggle-text>🌙 Dark</span></button></div></header><main class="flex-1 container mx-auto px-4 py-8 bg-white rounded-lg shadow-md dark:bg-gray-800 dark:shadow-lg"><div class="max-w-2xl mx-auto py-8 px-4"><article class="prose prose-slate dark:prose-invert"><h1 class="text-3xl font-bold mb-4 dark:text-gray-100">React Best Practices: Immutability</h1><div class="flex items-center text-gray-500 text-sm space-x-4 mb-8 dark:text-gray-400"><span>Jun 11, 2024</span></div><p>Immutability is an important concept in React development. Without a solid
+understanding of it, you would certainly struggle with state management in your
+React applications. In this blog post, we will explore the concept of
+immutability, its importance in React, and how to apply it effectively in your
+projects.</p><h2 id=what-is-immutability>What is Immutability?</h2><p>Immutability is the ability of an objects value to be changed after it;s<br>been created. In simpler terms, once an object is created, its value cannot be
+changed. If you want to &ldquo;change&rdquo; the object you need to create a new object with
+the desired changes. Employing immutability in your application helps you
+ensure that the data inside an object remain consistent and predictable. If
+an object is passed into a function and you mutate it within that function, the
+caller of the function can no longer be certain that the object will remain
+unchanged. This can lead to bugs that are difficult to track down.
+Immutability also allows for comparison optimizations by only checking if the
+reference to the object has changed, rather than comparing all the values in the
+entire object.</p><h2 id=why-is-immutability-important-in-react>Why is Immutability Important in React?</h2><p>React uses this the shallow comparison objects to optimize when the
+component should re-render. This is where immutability comes in handy. If
+you always create a new object when changing the state then React can easily
+determine if there are new changes to render. If you mutate the object directly
+then React will not be able to detect the changes and will not re-render. This
+will make it difficult to track down bugs and identify when or why portions
+of your application are or are not updating when you expect them to.</p><h2 id=how-to-apply-immutability-in-react>How to Apply Immutability in React</h2><p>There are some datatypes that are really easy to make immutable like strings
+or primitives. Objects and arrays are a bit more difficult.</p><h3 id=objects>Objects</h3><p>When you want to update an object you can use the spread operator (<code>...</code>)
+to copy all the properties from the old object to the new object and then
+overwrite the properties you want to change.</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript><span style=display:flex><span><span style=color:#66d9ef>const</span> <span style=color:#a6e22e>person</span> <span style=color:#f92672>=</span> {
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>name</span><span style=color:#f92672>:</span> <span style=color:#e6db74>&#39;Alice&#39;</span>,
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>age</span><span style=color:#f92672>:</span> <span style=color:#ae81ff>25</span>,
+</span></span><span style=display:flex><span>};
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e>// Create a new object with the same properties as person but with age 26
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span><span style=color:#66d9ef>const</span> <span style=color:#a6e22e>updatedPerson</span> <span style=color:#f92672>=</span> {...<span style=color:#a6e22e>person</span>, <span style=color:#a6e22e>age</span><span style=color:#f92672>:</span> <span style=color:#ae81ff>26</span>};
+</span></span></code></pre></div><p>If you need to update nested objects you need to continue to use the spread
+operator at every level.</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript><span style=display:flex><span><span style=color:#66d9ef>const</span> <span style=color:#a6e22e>person</span> <span style=color:#f92672>=</span> {
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>name</span><span style=color:#f92672>:</span> <span style=color:#e6db74>&#39;Alice&#39;</span>,
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>age</span><span style=color:#f92672>:</span> <span style=color:#ae81ff>25</span>,
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>address</span><span style=color:#f92672>:</span> {
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>city</span><span style=color:#f92672>:</span> <span style=color:#e6db74>&#39;New York&#39;</span>,
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>country</span><span style=color:#f92672>:</span> <span style=color:#e6db74>&#39;USA&#39;</span>,
+</span></span><span style=display:flex><span>  },
+</span></span><span style=display:flex><span>};
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e>// Create a new object with the same properties as person but with the city
+</span></span></span><span style=display:flex><span><span style=color:#75715e>// changed to San Francisco
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span><span style=color:#66d9ef>const</span> <span style=color:#a6e22e>updatedPerson</span> <span style=color:#f92672>=</span> {
+</span></span><span style=display:flex><span>  ...<span style=color:#a6e22e>person</span>,
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>address</span><span style=color:#f92672>:</span> {
+</span></span><span style=display:flex><span>    ...<span style=color:#a6e22e>person</span>.<span style=color:#a6e22e>address</span>,
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>city</span><span style=color:#f92672>:</span> <span style=color:#e6db74>&#39;San Francisco&#39;</span>,
+</span></span><span style=display:flex><span>  },
+</span></span><span style=display:flex><span>};
+</span></span></code></pre></div><h3 id=arrays>Arrays</h3><p>Since arrays are objects you can use the spread operator to copy the array
+when you need to add a new element on one end.</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript><span style=display:flex><span><span style=color:#66d9ef>const</span> <span style=color:#a6e22e>numbers</span> <span style=color:#f92672>=</span> [<span style=color:#ae81ff>1</span>, <span style=color:#ae81ff>2</span>, <span style=color:#ae81ff>3</span>, <span style=color:#ae81ff>4</span>, <span style=color:#ae81ff>5</span>];
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e>// Create a new array with all the elements of numbers and add 6 to the end
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span><span style=color:#66d9ef>const</span> <span style=color:#a6e22e>appendNumbers</span> <span style=color:#f92672>=</span> [...<span style=color:#a6e22e>numbers</span>, <span style=color:#ae81ff>6</span>];
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e>// or
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>const</span> <span style=color:#a6e22e>prependNumbers</span> <span style=color:#f92672>=</span> [<span style=color:#ae81ff>0</span>, ...<span style=color:#a6e22e>numbers</span>];
+</span></span></code></pre></div><p>If you need to add an element in the middle of the array you can use the
+<code>slice</code> method to create two new arrays and then combine them with the new
+element in the middle.</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript><span style=display:flex><span><span style=color:#66d9ef>const</span> <span style=color:#a6e22e>numbers</span> <span style=color:#f92672>=</span> [<span style=color:#ae81ff>1</span>, <span style=color:#ae81ff>2</span>, <span style=color:#ae81ff>3</span>, <span style=color:#ae81ff>4</span>, <span style=color:#ae81ff>5</span>];
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e>// Create a new array with 6 inserted after the second element
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span><span style=color:#66d9ef>const</span> <span style=color:#a6e22e>insertNumber</span> <span style=color:#f92672>=</span> [...<span style=color:#a6e22e>numbers</span>.<span style=color:#a6e22e>slice</span>(<span style=color:#ae81ff>0</span>, <span style=color:#ae81ff>2</span>), <span style=color:#ae81ff>6</span>, ...<span style=color:#a6e22e>numbers</span>.<span style=color:#a6e22e>slice</span>(<span style=color:#ae81ff>2</span>)];
+</span></span></code></pre></div><p>if you need to remove an element from an array you can use the <code>filter</code> method
+to create a new array with the element removed as it creates a new array
+instead of mutating the original.</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript><span style=display:flex><span><span style=color:#66d9ef>const</span> <span style=color:#a6e22e>numbers</span> <span style=color:#f92672>=</span> [<span style=color:#ae81ff>1</span>, <span style=color:#ae81ff>2</span>, <span style=color:#ae81ff>3</span>, <span style=color:#ae81ff>4</span>, <span style=color:#ae81ff>5</span>];
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e>// Create a new array with the element 3 removed
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span><span style=color:#66d9ef>const</span> <span style=color:#a6e22e>removeNumber</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>numbers</span>.<span style=color:#a6e22e>filter</span>((<span style=color:#a6e22e>number</span>) =&gt; <span style=color:#a6e22e>number</span> <span style=color:#f92672>!==</span> <span style=color:#ae81ff>3</span>);
+</span></span></code></pre></div><h2 id=conclusion>Conclusion</h2><p>Mastering immutability is crucial for writing efficient and predictable
+React code. By keeping your data immutable, you can avoid many common bugs
+and make your application easier to reason about. Remember to always think
+if you are changing a value or replacing a value.</p><p>Immutability is not a concept exclusive to react either. give it a try in
+your Java or C# or Python code. Other languages may not make it as easy or
+clean looking but just thinking about immutability can help you write better
+code. Especially when dealing with concurrency.</p></article></div></main><footer class="mt-8 py-6 text-center text-gray-500 text-sm dark:text-gray-400">&copy; 2025 JDORO.println. Powered by <a href=https://gohugo.io/ class="text-blue-500 hover:underline dark:text-blue-300 dark:hover:text-blue-100">Hugo</a>.</footer><script>const body=document.documentElement,toggle=document.getElementById("dark-toggle"),toggleText=document.getElementById("dark-toggle-text");(localStorage.getItem("theme")==="dark"||!localStorage.getItem("theme")&&window.matchMedia("(prefers-color-scheme: dark)").matches)&&(body.classList.add("dark"),toggleText&&(toggleText.textContent="☀️ Light")),toggle.addEventListener("click",()=>{console.log("toggle"),body.classList.toggle("dark"),body.classList.contains("dark")?(localStorage.setItem("theme","dark"),toggleText.textContent="☀️ Light"):(localStorage.setItem("theme","light"),toggleText.textContent="🌙 Dark")})</script></body></html>

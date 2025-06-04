@@ -1,0 +1,39 @@
+<!doctype html><html lang=en><head><meta charset=UTF-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Pure Functions Defined</title><link rel=stylesheet href=/css/main.css></head><body class="bg-gray-50 text-gray-900 min-h-screen flex flex-col dark:bg-gray-900 dark:text-gray-100"><header class="bg-white shadow mb-8 dark:bg-gray-800 dark:shadow-lg"><div class="container mx-auto px-4 py-6 flex items-center justify-between"><a href=/ class="text-3xl font-bold text-blue-600 hover:text-blue-800 transition dark:text-blue-400 dark:hover:text-blue-200">JDORO.println</a>
+<button id=dark-toggle class="ml-4 px-3 py-1 rounded bg-gray-200 text-gray-800 dark:bg-gray-700 dark:text-gray-100 focus:outline-none transition">
+<span id=dark-toggle-text>🌙 Dark</span></button></div></header><main class="flex-1 container mx-auto px-4 py-8 bg-white rounded-lg shadow-md dark:bg-gray-800 dark:shadow-lg"><div class="max-w-2xl mx-auto py-8 px-4"><article class="prose prose-slate dark:prose-invert"><h1 class="text-3xl font-bold mb-4 dark:text-gray-100">Pure Functions Defined</h1><div class="flex items-center text-gray-500 text-sm space-x-4 mb-8 dark:text-gray-400"><span>May 19, 2024</span></div><p>In the realm of programming, functions are the workhorses. They take input,
+perform an operation, and return an output. But within this seemingly simple
+concept lies a spectrum of function types, each with its own strengths and
+quirks. Today, we&rsquo;ll be diving into the world of <strong>pure functions</strong>,
+understanding their core principles of <strong>idempotence</strong> and the absence of
+<strong>side effects</strong>.</p><h2 id=pure-and-simple-the-essence-of-a-pure-function>Pure and Simple: The Essence of a Pure Function</h2><p>A pure function is like a mathematical equation: predictable and reliable. It
+adheres to two key tenets:</p><ol><li><p><strong>Idempotence:</strong> Given the same set of inputs, a pure function will always
+return the same output, no matter how many times you call it. This makes pure
+functions inherently repeatable and reliable.</p></li><li><p><strong>No Side Effects:</strong> A pure function focuses solely on its input and output,
+leaving the surrounding environment unchanged. It doesn&rsquo;t modify global
+variables, write to files, or interact with external systems. This isolation
+keeps the function&rsquo;s behavior consistent and predictable.</p></li></ol><p>Think of it like a recipe. A pure function, like a well-written recipe, takes
+the same ingredients (inputs) and always yields the same delicious dish (output)
+every single time. There&rsquo;s no sneaky business of adding a pinch of extra salt
+here or there depending on the mood – the function sticks to the script!</p><h2 id=examples-of-pure-bliss>Examples of Pure Bliss</h2><p>Let&rsquo;s illustrate pure functions with some code snippets. Here&rsquo;s a function that
+calculates the area of a circle:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript><span style=display:flex><span><span style=color:#66d9ef>function</span> <span style=color:#a6e22e>areaOfCircle</span>(<span style=color:#a6e22e>radius</span>) {
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>const</span> <span style=color:#a6e22e>pi</span> <span style=color:#f92672>=</span> <span style=color:#ae81ff>3.14159</span>;  <span style=color:#75715e>// Constant value
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>  <span style=color:#66d9ef>return</span> <span style=color:#a6e22e>pi</span> <span style=color:#f92672>*</span> <span style=color:#a6e22e>radius</span> <span style=color:#f92672>*</span> <span style=color:#a6e22e>radius</span>;
+</span></span><span style=display:flex><span>}
+</span></span></code></pre></div><p>This function is pure. It takes a radius as input, uses a constant value of pi,
+and returns the area. The same radius will always result in the same area, and
+the function doesn&rsquo;t modify anything outside of its scope.</p><h2 id=not-so-pure-examples-a-look-at-impure-functions>Not-So-Pure Examples: A Look at Impure Functions</h2><p>Now, let&rsquo;s see an impure function:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript><span style=display:flex><span><span style=color:#66d9ef>let</span> <span style=color:#a6e22e>globalCount</span> <span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span>;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>function</span> <span style=color:#a6e22e>incrementCount</span>() {
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>globalCount</span> <span style=color:#f92672>+=</span> <span style=color:#ae81ff>1</span>;
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>return</span> <span style=color:#a6e22e>globalCount</span>;
+</span></span><span style=display:flex><span>}
+</span></span></code></pre></div><p>This function relies on a global variable <code>globalCount</code> to keep track of the
+number of times it&rsquo;s been called. This introduces an external dependency and
+makes the function&rsquo;s output unpredictable – it depends on how many times the
+function has been called before. This is a side effect, and it makes the
+function less reliable and harder to reason about.</p><h2 id=why-pure-functions-rule>Why Pure Functions Rule</h2><p>Pure functions offer a multitude of benefits:</p><ul><li><strong>Predictability:</strong> You always know what to expect from a pure function.</li><li><strong>Testability:</strong> Pure functions are easier to test in isolation since their
+output solely depends on the input.</li><li><strong>Concurrency:</strong> Pure functions can be safely executed concurrently without
+worrying about data races (conflicts when multiple threads access the same data).</li><li><strong>Composability:</strong> Pure functions can be easily combined to create more complex
+logic, leading to cleaner and more modular code.</li></ul><h2 id=embrace-the-purity>Embrace the Purity</h2><p>By understanding and leveraging pure functions, you can write cleaner, more
+reliable, and easier-to-maintain code. So next time you&rsquo;re crafting a function,
+consider the path of purity – it might just lead you to programming bliss!</p></article></div></main><footer class="mt-8 py-6 text-center text-gray-500 text-sm dark:text-gray-400">&copy; 2025 JDORO.println. Powered by <a href=https://gohugo.io/ class="text-blue-500 hover:underline dark:text-blue-300 dark:hover:text-blue-100">Hugo</a>.</footer><script>const body=document.documentElement,toggle=document.getElementById("dark-toggle"),toggleText=document.getElementById("dark-toggle-text");(localStorage.getItem("theme")==="dark"||!localStorage.getItem("theme")&&window.matchMedia("(prefers-color-scheme: dark)").matches)&&(body.classList.add("dark"),toggleText&&(toggleText.textContent="☀️ Light")),toggle.addEventListener("click",()=>{console.log("toggle"),body.classList.toggle("dark"),body.classList.contains("dark")?(localStorage.setItem("theme","dark"),toggleText.textContent="☀️ Light"):(localStorage.setItem("theme","light"),toggleText.textContent="🌙 Dark")})</script></body></html>

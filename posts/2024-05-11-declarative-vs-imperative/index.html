@@ -1,0 +1,47 @@
+<!doctype html><html lang=en><head><meta charset=UTF-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Lets Talk Declarative vs Imperative</title><link rel=stylesheet href=/css/main.css></head><body class="bg-gray-50 text-gray-900 min-h-screen flex flex-col dark:bg-gray-900 dark:text-gray-100"><header class="bg-white shadow mb-8 dark:bg-gray-800 dark:shadow-lg"><div class="container mx-auto px-4 py-6 flex items-center justify-between"><a href=/ class="text-3xl font-bold text-blue-600 hover:text-blue-800 transition dark:text-blue-400 dark:hover:text-blue-200">JDORO.println</a>
+<button id=dark-toggle class="ml-4 px-3 py-1 rounded bg-gray-200 text-gray-800 dark:bg-gray-700 dark:text-gray-100 focus:outline-none transition">
+<span id=dark-toggle-text>🌙 Dark</span></button></div></header><main class="flex-1 container mx-auto px-4 py-8 bg-white rounded-lg shadow-md dark:bg-gray-800 dark:shadow-lg"><div class="max-w-2xl mx-auto py-8 px-4"><article class="prose prose-slate dark:prose-invert"><h1 class="text-3xl font-bold mb-4 dark:text-gray-100">Lets Talk Declarative vs Imperative</h1><div class="flex items-center text-gray-500 text-sm space-x-4 mb-8 dark:text-gray-400"><span>May 11, 2024</span></div><p>Have you ever struggled to decipher a complex block of code? Or maybe
+you&rsquo;ve written some code that feels overly long-winded. Understanding the
+difference between imperative and declarative code can be your secret
+weapon in tackling these challenges. This approach shapes how we instruct
+computers to achieve our programming goals, impacting both code readability
+and maintainability.</p><p>Over the years I&rsquo;ve been gradually spending more time writing declarative
+code, and I&rsquo;ve not only found it to be a more enjoyable experience but also
+a more maintainable one. I&rsquo;ve been able to create more reusable and
+composable chunks of code that can be easily understood by others.</p><h2 id=whats-the-difference>What&rsquo;s the Difference?</h2><p>In programming, we have two main approaches to achieve a desired outcome:
+imperative and declarative. The key distinction lies in how we instruct the
+computer to get there.</p><ul><li><p><strong>Imperative code</strong> focuses on the &ldquo;how&rdquo; - it dictates the step-by-step
+instructions the computer needs to follow. Think of it as a recipe that
+meticulously details each action required to bake a cake.</p></li><li><p><strong>Declarative code</strong>, on the other hand, emphasizes the &ldquo;what&rdquo; - it
+specifies the desired end state without outlining the exact steps. It&rsquo;s like
+telling someone you want a cake, and they handle the baking process.</p></li></ul><h2 id=functional-programming-vs-object-oriented-programming>Functional Programming vs Object-Oriented Programming</h2><p>These two programming paradigms fall on opposite sides of the spectrum:</p><ul><li><p><strong>Functional programming</strong> is inherently more declarative. It emphasizes
+functions that transform data without altering external state. Code tends
+to be cleaner, more concise, and easier to reason about.</p></li><li><p><strong>Object-oriented programming (OOP)</strong> leans towards the imperative side.
+OOP relies on objects that encapsulate data and behavior, often involving
+state changes. Code can become more verbose due to the focus on how
+objects interact.</p></li></ul><h2 id=examples>Examples</h2><p><strong>Imperative (Step-by-Step) Approach:</strong></p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript><span style=display:flex><span><span style=color:#75715e>// Create an empty array
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span><span style=color:#66d9ef>const</span> <span style=color:#a6e22e>numbers</span> <span style=color:#f92672>=</span> [];
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e>// Add elements to the array one by one (imperative instructions)
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span><span style=color:#a6e22e>numbers</span>.<span style=color:#a6e22e>push</span>(<span style=color:#ae81ff>5</span>);
+</span></span><span style=display:flex><span><span style=color:#a6e22e>numbers</span>.<span style=color:#a6e22e>push</span>(<span style=color:#ae81ff>10</span>);
+</span></span><span style=display:flex><span><span style=color:#a6e22e>numbers</span>.<span style=color:#a6e22e>push</span>(<span style=color:#ae81ff>15</span>);
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e>// Filter even numbers (imperative loop)
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span><span style=color:#66d9ef>const</span> <span style=color:#a6e22e>evenNumbers</span> <span style=color:#f92672>=</span> [];
+</span></span><span style=display:flex><span><span style=color:#66d9ef>for</span> (<span style=color:#66d9ef>let</span> <span style=color:#a6e22e>i</span> <span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span>; <span style=color:#a6e22e>i</span> <span style=color:#f92672>&lt;</span> <span style=color:#a6e22e>numbers</span>.<span style=color:#a6e22e>length</span>; <span style=color:#a6e22e>i</span><span style=color:#f92672>++</span>) {
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>if</span> (<span style=color:#a6e22e>numbers</span>[<span style=color:#a6e22e>i</span>] <span style=color:#f92672>%</span> <span style=color:#ae81ff>2</span> <span style=color:#f92672>===</span> <span style=color:#ae81ff>0</span>) {
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>evenNumbers</span>.<span style=color:#a6e22e>push</span>(<span style=color:#a6e22e>numbers</span>[<span style=color:#a6e22e>i</span>]);
+</span></span><span style=display:flex><span>  }
+</span></span><span style=display:flex><span>}
+</span></span></code></pre></div><p>This code explicitly creates an empty array, adds elements one by one, and then uses a loop to filter even numbers with additional instructions.</p><p><strong>Declarative (Desired State) Approach:</strong></p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript><span style=display:flex><span><span style=color:#75715e>// Define an array of numbers
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span><span style=color:#66d9ef>const</span> <span style=color:#a6e22e>numbers</span> <span style=color:#f92672>=</span> [<span style=color:#ae81ff>5</span>, <span style=color:#ae81ff>10</span>, <span style=color:#ae81ff>15</span>, <span style=color:#ae81ff>20</span>];
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e>// Filter even numbers using declarative function (filter)
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span><span style=color:#66d9ef>const</span> <span style=color:#a6e22e>evenNumbers</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>numbers</span>.<span style=color:#a6e22e>filter</span>(<span style=color:#a6e22e>number</span> =&gt; <span style=color:#a6e22e>number</span> <span style=color:#f92672>%</span> <span style=color:#ae81ff>2</span> <span style=color:#f92672>===</span> <span style=color:#ae81ff>0</span>);
+</span></span></code></pre></div><p>Here, we define the array directly. Then, we use the built-in <code>filter</code> function to achieve the desired outcome (finding even numbers) in a single line. The function itself handles the logic of iterating through the array.</p><h2 id=choosing-the-right-paradigm>Choosing the Right Paradigm</h2><p>The best approach depends on the specific problem you&rsquo;re trying to solve.
+Imperative code can be advantageous when you need fine-grained control
+over program flow. Declarative code shines when you want to express the
+desired outcome clearly and leave the implementation details to the computer.</p><p>In essence, both paradigms have their place. Understanding the strengths
+and weaknesses of each will make you a more versatile programmer.</p><p>Next time you&rsquo;re working through a complex problem thins about how you can
+leverage the power of declarative programming to simplify your solution.</p></article></div></main><footer class="mt-8 py-6 text-center text-gray-500 text-sm dark:text-gray-400">&copy; 2025 JDORO.println. Powered by <a href=https://gohugo.io/ class="text-blue-500 hover:underline dark:text-blue-300 dark:hover:text-blue-100">Hugo</a>.</footer><script>const body=document.documentElement,toggle=document.getElementById("dark-toggle"),toggleText=document.getElementById("dark-toggle-text");(localStorage.getItem("theme")==="dark"||!localStorage.getItem("theme")&&window.matchMedia("(prefers-color-scheme: dark)").matches)&&(body.classList.add("dark"),toggleText&&(toggleText.textContent="☀️ Light")),toggle.addEventListener("click",()=>{console.log("toggle"),body.classList.toggle("dark"),body.classList.contains("dark")?(localStorage.setItem("theme","dark"),toggleText.textContent="☀️ Light"):(localStorage.setItem("theme","light"),toggleText.textContent="🌙 Dark")})</script></body></html>

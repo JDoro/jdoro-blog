@@ -1,0 +1,65 @@
+<!doctype html><html lang=en><head><meta charset=UTF-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Taking Control: Controlled vs. Uncontrolled Components in React</title><link rel=stylesheet href=/css/main.css></head><body class="bg-gray-50 text-gray-900 min-h-screen flex flex-col dark:bg-gray-900 dark:text-gray-100"><header class="bg-white shadow mb-8 dark:bg-gray-800 dark:shadow-lg"><div class="container mx-auto px-4 py-6 flex items-center justify-between"><a href=/ class="text-3xl font-bold text-blue-600 hover:text-blue-800 transition dark:text-blue-400 dark:hover:text-blue-200">JDORO.println</a>
+<button id=dark-toggle class="ml-4 px-3 py-1 rounded bg-gray-200 text-gray-800 dark:bg-gray-700 dark:text-gray-100 focus:outline-none transition">
+<span id=dark-toggle-text>🌙 Dark</span></button></div></header><main class="flex-1 container mx-auto px-4 py-8 bg-white rounded-lg shadow-md dark:bg-gray-800 dark:shadow-lg"><div class="max-w-2xl mx-auto py-8 px-4"><article class="prose prose-slate dark:prose-invert"><h1 class="text-3xl font-bold mb-4 dark:text-gray-100">Taking Control: Controlled vs. Uncontrolled Components in React</h1><div class="flex items-center text-gray-500 text-sm space-x-4 mb-8 dark:text-gray-400"><span>Apr 16, 2024</span></div><p>Imagine a car. You, the developer, are firmly behind the wheel (the React state)
+steering the form&rsquo;s behavior. But unlike a car with just one driver, React offers
+two approaches to handling form data: controlled components and uncontrolled
+components. Understanding the distinction between these two is crucial for
+crafting effective and predictable React applications.</p><p><strong>Controlled Components: In the Driver&rsquo;s Seat</strong></p><p>In controlled components, the form data, like input values, is managed entirely
+by React&rsquo;s state. Here&rsquo;s how it works:</p><ol><li><strong>State as Source of Truth:</strong> You define state variables in your React
+component to hold the form data.</li><li><strong>Controlled Inputs:</strong> You use the <code>value</code> attribute of form
+elements (like <code>&lt;input></code>, <code>&lt;textarea></code>) to bind their values to the state variables.</li><li><strong>Event Handlers:</strong> When the user interacts with the form (e.g., typing
+in an input), you define event handlers (like <code>onChange</code>) that update the state variables with the new values.</li></ol><p>This approach offers several benefits:</p><ul><li><strong>Predictability:</strong> Since the state dictates the form&rsquo;s values, you have
+complete control over the data and can easily implement validation or conditional
+rendering.</li><li><strong>Single Source of Truth:</strong> The form data resides within your React state,
+ensuring consistency and simplifying data management.</li><li><strong>Real-time Updates:</strong> Changes in the form reflect instantly in the UI
+due to React&rsquo;s efficient re-rendering mechanism.</li></ul><p><strong>Code Example:</strong></p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-jsx data-lang=jsx><span style=display:flex><span><span style=color:#66d9ef>import</span> <span style=color:#a6e22e>React</span>, { <span style=color:#a6e22e>useState</span> } <span style=color:#a6e22e>from</span> <span style=color:#e6db74>&#39;react&#39;</span>;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>function</span> <span style=color:#a6e22e>ControlledInput</span>() {
+</span></span><span style=display:flex><span>   <span style=color:#66d9ef>const</span> [<span style=color:#a6e22e>name</span>, <span style=color:#a6e22e>setName</span>] <span style=color:#f92672>=</span> <span style=color:#a6e22e>useState</span>(<span style=color:#e6db74>&#39;&#39;</span>);
+</span></span><span style=display:flex><span>   
+</span></span><span style=display:flex><span>   <span style=color:#66d9ef>const</span> <span style=color:#a6e22e>handleChange</span> <span style=color:#f92672>=</span> (<span style=color:#a6e22e>event</span>) =&gt; {  
+</span></span><span style=display:flex><span>     <span style=color:#a6e22e>setName</span>(<span style=color:#a6e22e>event</span>.<span style=color:#a6e22e>target</span>.<span style=color:#a6e22e>value</span>);
+</span></span><span style=display:flex><span>   }
+</span></span><span style=display:flex><span>   
+</span></span><span style=display:flex><span>   <span style=color:#66d9ef>return</span> (
+</span></span><span style=display:flex><span>      &lt;<span style=color:#f92672>div</span>&gt;
+</span></span><span style=display:flex><span>        &lt;<span style=color:#f92672>label</span> <span style=color:#a6e22e>htmlFor</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;name&#34;</span>&gt;<span style=color:#a6e22e>Name</span><span style=color:#f92672>:</span> &lt;/<span style=color:#f92672>label</span>&gt;
+</span></span><span style=display:flex><span>        &lt;<span style=color:#f92672>input</span> <span style=color:#a6e22e>type</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;text&#34;</span> <span style=color:#a6e22e>id</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;name&#34;</span> <span style=color:#a6e22e>value</span><span style=color:#f92672>=</span>{<span style=color:#a6e22e>name</span>} <span style=color:#a6e22e>onChange</span><span style=color:#f92672>=</span>{<span style=color:#a6e22e>handleChange</span>} /&gt;
+</span></span><span style=display:flex><span>        &lt;<span style=color:#f92672>p</span>&gt;<span style=color:#a6e22e>You</span> <span style=color:#a6e22e>entered</span><span style=color:#f92672>:</span> {<span style=color:#a6e22e>name</span>}&lt;/<span style=color:#f92672>p</span>&gt;
+</span></span><span style=display:flex><span>      &lt;/<span style=color:#f92672>div</span>&gt;
+</span></span><span style=display:flex><span>   );
+</span></span><span style=display:flex><span>}
+</span></span></code></pre></div><p><strong>Uncontrolled Components: Taking the Backseat</strong></p><p>Think of an uncontrolled component as a form with a mind of its own. The data
+is managed directly by the DOM (Document Object Model) itself, and React acts
+more as an observer. Here&rsquo;s the gist:</p><ol><li><strong>Uncontrolled Inputs:</strong> You remove the <code>value</code> attribute from form elements,
+allowing the DOM to handle the data.</li><li><strong>Refs to the Rescue:</strong> To access the form data after submission (e.g., using
+a button click), you use refs to get a reference to the underlying DOM element.</li></ol><p>While simpler to set up initially, uncontrolled components come with some
+trade-offs:</p><ul><li><strong>Limited Control:</strong> You have less control over the form&rsquo;s behavior and
+validation becomes more complex.</li><li><strong>DOM Dependence:</strong> Relies on the DOM for data, which can lead to
+inconsistencies if the DOM is manipulated externally.</li><li><strong>Data Access on Submission:</strong> You can only access the data after the form
+is submitted, making real-time updates trickier.</li></ul><p><strong>Code Example:</strong></p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-jsx data-lang=jsx><span style=display:flex><span><span style=color:#66d9ef>import</span> <span style=color:#a6e22e>React</span>, { <span style=color:#a6e22e>useRef</span> } <span style=color:#a6e22e>from</span> <span style=color:#e6db74>&#39;react&#39;</span>;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>function</span> <span style=color:#a6e22e>UncontrolledInput</span>() {
+</span></span><span style=display:flex><span>   <span style=color:#66d9ef>const</span> <span style=color:#a6e22e>nameInputRef</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>useRef</span>(<span style=color:#66d9ef>null</span>);
+</span></span><span style=display:flex><span>   
+</span></span><span style=display:flex><span>   <span style=color:#66d9ef>const</span> <span style=color:#a6e22e>handleSubmit</span> <span style=color:#f92672>=</span> (<span style=color:#a6e22e>event</span>) =&gt; {
+</span></span><span style=display:flex><span>      <span style=color:#a6e22e>event</span>.<span style=color:#a6e22e>preventDefault</span>();
+</span></span><span style=display:flex><span>      <span style=color:#66d9ef>const</span> <span style=color:#a6e22e>name</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>nameInputRef</span>.<span style=color:#a6e22e>current</span>.<span style=color:#a6e22e>value</span>;
+</span></span><span style=display:flex><span>      <span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#e6db74>&#39;You entered:&#39;</span>, <span style=color:#a6e22e>name</span>);
+</span></span><span style=display:flex><span>   }
+</span></span><span style=display:flex><span>   
+</span></span><span style=display:flex><span>   <span style=color:#66d9ef>return</span> (
+</span></span><span style=display:flex><span>      &lt;<span style=color:#f92672>div</span>&gt;
+</span></span><span style=display:flex><span>         &lt;<span style=color:#f92672>label</span> <span style=color:#a6e22e>htmlFor</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;name&#34;</span>&gt;<span style=color:#a6e22e>Name</span><span style=color:#f92672>:</span> &lt;/<span style=color:#f92672>label</span>&gt;
+</span></span><span style=display:flex><span>         &lt;<span style=color:#f92672>input</span> <span style=color:#a6e22e>type</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;text&#34;</span> <span style=color:#a6e22e>id</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;name&#34;</span> <span style=color:#a6e22e>ref</span><span style=color:#f92672>=</span>{<span style=color:#a6e22e>nameInputRef</span>} /&gt;
+</span></span><span style=display:flex><span>         &lt;<span style=color:#f92672>button</span> <span style=color:#a6e22e>onClick</span><span style=color:#f92672>=</span>{<span style=color:#a6e22e>handleSubmit</span>}&gt;<span style=color:#a6e22e>Submit</span>&lt;/<span style=color:#f92672>button</span>&gt;
+</span></span><span style=display:flex><span>      &lt;/<span style=color:#f92672>div</span>&gt;
+</span></span><span style=display:flex><span>   );
+</span></span><span style=display:flex><span>}
+</span></span></code></pre></div><p><strong>Choosing Your Path: When to Use What</strong></p><p>Controlled components are generally the recommended approach for most
+forms in React due to their predictability and ease of data management.
+However, uncontrolled components might be suitable for specific scenarios,
+like integrating with third-party form libraries that manage their own state.</p><p>Ultimately, the choice depends on your specific needs and project requirements.
+By understanding the strengths and weaknesses of both controlled and
+uncontrolled components, you can make informed decisions to build efficient
+and user-friendly React applications.</p></article></div></main><footer class="mt-8 py-6 text-center text-gray-500 text-sm dark:text-gray-400">&copy; 2025 JDORO.println. Powered by <a href=https://gohugo.io/ class="text-blue-500 hover:underline dark:text-blue-300 dark:hover:text-blue-100">Hugo</a>.</footer><script>const body=document.documentElement,toggle=document.getElementById("dark-toggle"),toggleText=document.getElementById("dark-toggle-text");(localStorage.getItem("theme")==="dark"||!localStorage.getItem("theme")&&window.matchMedia("(prefers-color-scheme: dark)").matches)&&(body.classList.add("dark"),toggleText&&(toggleText.textContent="☀️ Light")),toggle.addEventListener("click",()=>{console.log("toggle"),body.classList.toggle("dark"),body.classList.contains("dark")?(localStorage.setItem("theme","dark"),toggleText.textContent="☀️ Light"):(localStorage.setItem("theme","light"),toggleText.textContent="🌙 Dark")})</script></body></html>

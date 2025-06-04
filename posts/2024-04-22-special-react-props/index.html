@@ -1,0 +1,49 @@
+<!doctype html><html lang=en><head><meta charset=UTF-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Special Props in ReactJS</title><link rel=stylesheet href=/css/main.css></head><body class="bg-gray-50 text-gray-900 min-h-screen flex flex-col dark:bg-gray-900 dark:text-gray-100"><header class="bg-white shadow mb-8 dark:bg-gray-800 dark:shadow-lg"><div class="container mx-auto px-4 py-6 flex items-center justify-between"><a href=/ class="text-3xl font-bold text-blue-600 hover:text-blue-800 transition dark:text-blue-400 dark:hover:text-blue-200">JDORO.println</a>
+<button id=dark-toggle class="ml-4 px-3 py-1 rounded bg-gray-200 text-gray-800 dark:bg-gray-700 dark:text-gray-100 focus:outline-none transition">
+<span id=dark-toggle-text>🌙 Dark</span></button></div></header><main class="flex-1 container mx-auto px-4 py-8 bg-white rounded-lg shadow-md dark:bg-gray-800 dark:shadow-lg"><div class="max-w-2xl mx-auto py-8 px-4"><article class="prose prose-slate dark:prose-invert"><h1 class="text-3xl font-bold mb-4 dark:text-gray-100">Special Props in ReactJS</h1><div class="flex items-center text-gray-500 text-sm space-x-4 mb-8 dark:text-gray-400"><span>Apr 22, 2024</span></div><p>In ReactJS, props are a cornerstone for communication between components.
+While most props are custom attributes you define to configure a component&rsquo;s
+behavior, there are two special props that React itself uses for internal
+purposes: <code>key</code> and <code>ref</code>.</p><ul><li><p><strong><code>key</code> prop</strong>: This prop is used by React to identify unique items within a
+list of elements. It&rsquo;s essential for optimizing performance when rendering
+lists that change dynamically. The key prop should be a unique identifier
+for each item, such as an ID from your data source.</p></li><li><p><strong><code>ref</code> prop</strong>: The ref prop provides a way to access the DOM node directly
+of a component instance. This is useful for situations where you need to
+interact with the DOM directly, such as focusing an input element or integrating
+with third-party libraries.</p></li></ul><p>It&rsquo;s important to remember that these special props are not accessible within
+the component itself using <code>this.props</code>. If you need to pass data down to the
+component that serves a similar purpose to the key prop, you should define a
+separate custom prop.</p><h2 id=examples>Examples</h2><p>Let&rsquo;s look at some examples to illustrate the usage of special props in ReactJS:</p><h3 id=key-prop><code>Key</code> Prop</h3><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-jsx data-lang=jsx><span style=display:flex><span><span style=color:#66d9ef>const</span> <span style=color:#a6e22e>items</span> <span style=color:#f92672>=</span> [
+</span></span><span style=display:flex><span>    { <span style=color:#a6e22e>id</span><span style=color:#f92672>:</span> <span style=color:#ae81ff>1</span>, <span style=color:#a6e22e>name</span><span style=color:#f92672>:</span> <span style=color:#e6db74>&#39;Item 1&#39;</span> },
+</span></span><span style=display:flex><span>    { <span style=color:#a6e22e>id</span><span style=color:#f92672>:</span> <span style=color:#ae81ff>2</span>, <span style=color:#a6e22e>name</span><span style=color:#f92672>:</span> <span style=color:#e6db74>&#39;Item 2&#39;</span> },
+</span></span><span style=display:flex><span>    { <span style=color:#a6e22e>id</span><span style=color:#f92672>:</span> <span style=color:#ae81ff>3</span>, <span style=color:#a6e22e>name</span><span style=color:#f92672>:</span> <span style=color:#e6db74>&#39;Item 3&#39;</span> },
+</span></span><span style=display:flex><span>];
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>const</span> <span style=color:#a6e22e>MyList</span> <span style=color:#f92672>=</span> () =&gt; {
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>return</span> (
+</span></span><span style=display:flex><span>        &lt;<span style=color:#f92672>ul</span>&gt;
+</span></span><span style=display:flex><span>          {<span style=color:#a6e22e>items</span>.<span style=color:#a6e22e>map</span>((<span style=color:#a6e22e>item</span>) =&gt; (
+</span></span><span style=display:flex><span>              &lt;<span style=color:#f92672>li</span> <span style=color:#a6e22e>key</span><span style=color:#f92672>=</span>{<span style=color:#a6e22e>item</span>.<span style=color:#a6e22e>id</span>}&gt;{<span style=color:#a6e22e>item</span>.<span style=color:#a6e22e>name</span>}&lt;/<span style=color:#f92672>li</span>&gt;
+</span></span><span style=display:flex><span>            ))}
+</span></span><span style=display:flex><span>        &lt;/<span style=color:#f92672>ul</span>&gt;
+</span></span><span style=display:flex><span>    );
+</span></span><span style=display:flex><span>};
+</span></span></code></pre></div><p>In this example, the <code>key</code> prop is assigned the unique <code>id</code> of each item in the
+items array. This helps React efficiently update the list when items are added,
+removed, or reordered.</p><h3 id=ref-prop><code>Ref</code> Prop</h3><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-jsx data-lang=jsx><span style=display:flex><span><span style=color:#66d9ef>const</span> <span style=color:#a6e22e>MyInput</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>React</span>.<span style=color:#a6e22e>createRef</span>();
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>const</span> <span style=color:#a6e22e>MyComponent</span> <span style=color:#f92672>=</span> () =&gt; {
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>const</span> <span style=color:#a6e22e>focusInput</span> <span style=color:#f92672>=</span> () =&gt; {
+</span></span><span style=display:flex><span>      <span style=color:#a6e22e>MyInput</span>.<span style=color:#a6e22e>current</span>.<span style=color:#a6e22e>focus</span>();  
+</span></span><span style=display:flex><span>    };
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>return</span> (
+</span></span><span style=display:flex><span>        &lt;<span style=color:#f92672>div</span>&gt;
+</span></span><span style=display:flex><span>            &lt;<span style=color:#f92672>input</span> <span style=color:#a6e22e>type</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;text&#34;</span> <span style=color:#a6e22e>ref</span><span style=color:#f92672>=</span>{<span style=color:#a6e22e>MyInput</span>} /&gt;
+</span></span><span style=display:flex><span>            &lt;<span style=color:#f92672>button</span> <span style=color:#a6e22e>onClick</span><span style=color:#f92672>=</span>{<span style=color:#a6e22e>focusInput</span>}&gt;<span style=color:#a6e22e>Focus</span> <span style=color:#a6e22e>Input</span>&lt;/<span style=color:#f92672>button</span>&gt;
+</span></span><span style=display:flex><span>        &lt;/<span style=color:#f92672>div</span>&gt;
+</span></span><span style=display:flex><span>    );
+</span></span><span style=display:flex><span>};
+</span></span></code></pre></div><p>Here, the <code>ref</code> prop is assigned to a <code>React.createRef</code> instance. This creates a
+reference to the underlying DOM node of the input element, which can then
+be accessed using <code>MyInput.current</code> to programmatically focus the input.</p><p>By understanding these special props and their use cases, you can effectively
+construct reusable and performant React components.</p></article></div></main><footer class="mt-8 py-6 text-center text-gray-500 text-sm dark:text-gray-400">&copy; 2025 JDORO.println. Powered by <a href=https://gohugo.io/ class="text-blue-500 hover:underline dark:text-blue-300 dark:hover:text-blue-100">Hugo</a>.</footer><script>const body=document.documentElement,toggle=document.getElementById("dark-toggle"),toggleText=document.getElementById("dark-toggle-text");(localStorage.getItem("theme")==="dark"||!localStorage.getItem("theme")&&window.matchMedia("(prefers-color-scheme: dark)").matches)&&(body.classList.add("dark"),toggleText&&(toggleText.textContent="☀️ Light")),toggle.addEventListener("click",()=>{console.log("toggle"),body.classList.toggle("dark"),body.classList.contains("dark")?(localStorage.setItem("theme","dark"),toggleText.textContent="☀️ Light"):(localStorage.setItem("theme","light"),toggleText.textContent="🌙 Dark")})</script></body></html>
