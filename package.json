@@ -1,0 +1,29 @@
+{
+  "name": "jdoro-blog",
+  "version": "1.0.0",
+  "description": "<header>",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:css": "npx postcss assets/css/main.css -o static/css/main.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JDoro/jdoro-blog.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/JDoro/jdoro-blog/issues"
+  },
+  "homepage": "https://github.com/JDoro/jdoro-blog#readme",
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.1.8",
+    "autoprefixer": "^10.4.21",
+    "postcss": "^8.5.4",
+    "postcss-cli": "^11.0.1",
+    "tailwindcss": "^4.1.8"
+  }
+}
