@@ -6,8 +6,43 @@
   <title>{{ .Title }}</title>
   <link rel="stylesheet" href="/css/main.css">
 </head>
-<body class="bg-gray-50 text-gray-900">
-  {{ block "main" . }}{{ end }}
+<body class="bg-gray-50 text-gray-900 min-h-screen flex flex-col dark:bg-gray-900 dark:text-gray-100">
+  <header class="bg-white shadow mb-8 dark:bg-gray-800 dark:shadow-lg">
+    <div class="container mx-auto px-4 py-6 flex items-center justify-between">
+      <a href="/" class="text-3xl font-bold text-blue-600 hover:text-blue-800 transition dark:text-blue-400 dark:hover:text-blue-200">{{ .Site.Title }}</a>
+      <button id="dark-toggle" class="ml-4 px-3 py-1 rounded bg-gray-200 text-gray-800 dark:bg-gray-700 dark:text-gray-100 focus:outline-none transition">
+        <span id="dark-toggle-text">🌙 Dark</span>
+      </button>
+    </div>
+  </header>
+  <main class="flex-1 container mx-auto px-4 py-8 bg-white rounded-lg shadow-md dark:bg-gray-800 dark:shadow-lg">
+    {{ block "main" . }}{{ end }}
+  </main>
+  <footer class="mt-8 py-6 text-center text-gray-500 text-sm dark:text-gray-400">
+    &copy; {{ now.Year }} {{ .Site.Title }}. Powered by <a href="https://gohugo.io/" class="text-blue-500 hover:underline dark:text-blue-300 dark:hover:text-blue-100">Hugo</a>.
+  </footer>
+  <script>
+    // Dark mode toggle logic
+    const body = document.documentElement;
+    const toggle = document.getElementById('dark-toggle');
+    const toggleText = document.getElementById('dark-toggle-text');
+    // Load preference
+    if (localStorage.getItem('theme') === 'dark' ||
+        (!localStorage.getItem('theme') && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      body.classList.add('dark');
+      if (toggleText) toggleText.textContent = '☀️ Light';
+    }
+    toggle.addEventListener('click', () => {
+      console.log('toggle');
+      body.classList.toggle('dark');
+      if (body.classList.contains('dark')) {
+        localStorage.setItem('theme', 'dark');
+        toggleText.textContent = '☀️ Light';
+      } else {
+        localStorage.setItem('theme', 'light');
+        toggleText.textContent = '🌙 Dark';
+      }
+    });
+  </script>
 </body>
 </html>
-

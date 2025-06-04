@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build:css": "npx postcss assets/css/main.css -o static/css/main.css"
+    "build:css": "postcss assets/css/main.css -o static/css/main.css"
   },
   "repository": {
     "type": "git",

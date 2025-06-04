@@ -7,9 +7,9 @@ module.exports = {
     './assets/**/*.css',
     './themes/**/*.{html,js}',
   ],
+  darkMode: 'class',
   theme: {
     extend: {},
   },
   plugins: [],
 };
-
