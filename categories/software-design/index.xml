@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Software Design on JDORO.println</title><link>https://jdoro.github.io/jdoro-blog/categories/software-design/</link><description>Recent content in Software Design on JDORO.println</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Sun, 19 May 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://jdoro.github.io/jdoro-blog/categories/software-design/index.xml" rel="self" type="application/rss+xml"/><item><title>Pure Functions Defined</title><link>https://jdoro.github.io/jdoro-blog/posts/2024-05-19-pure-functions/</link><pubDate>Sun, 19 May 2024 00:00:00 +0000</pubDate><guid>https://jdoro.github.io/jdoro-blog/posts/2024-05-19-pure-functions/</guid><description>&lt;p>In the realm of programming, functions are the workhorses. They take input,
+perform an operation, and return an output. But within this seemingly simple
+concept lies a spectrum of function types, each with its own strengths and
+quirks. Today, we&amp;rsquo;ll be diving into the world of &lt;strong>pure functions&lt;/strong>,
+understanding their core principles of &lt;strong>idempotence&lt;/strong> and the absence of
+&lt;strong>side effects&lt;/strong>.&lt;/p>
+&lt;h2 id="pure-and-simple-the-essence-of-a-pure-function">Pure and Simple: The Essence of a Pure Function&lt;/h2>
+&lt;p>A pure function is like a mathematical equation: predictable and reliable. It
+adheres to two key tenets:&lt;/p></description></item><item><title>Reach Higher with Higher-Order Functions</title><link>https://jdoro.github.io/jdoro-blog/posts/2024-05-16-higher-order-functions/</link><pubDate>Thu, 16 May 2024 00:00:00 +0000</pubDate><guid>https://jdoro.github.io/jdoro-blog/posts/2024-05-16-higher-order-functions/</guid><description>&lt;p>Higher-order functions (HOFs) are a powerful concept in functional programming
+that can take functions as arguments or return them as results. They offer a
+more concise and expressive way to write code, improve readability, and enhance
+code reusability. This blog post will delve into the world of HOFs, exploring
+their benefits, practical applications, and some important considerations.&lt;/p>
+&lt;h2 id="what-is-a-function">What is a Function?&lt;/h2>
+&lt;p>Before we dive into higher-order functions, let&amp;rsquo;s establish a common ground. A
+function is a reusable block of code that performs a specific task. It can take
+inputs (arguments) and return an output (value).&lt;/p></description></item><item><title>Lets Talk Declarative vs Imperative</title><link>https://jdoro.github.io/jdoro-blog/posts/2024-05-11-declarative-vs-imperative/</link><pubDate>Sat, 11 May 2024 00:00:00 +0000</pubDate><guid>https://jdoro.github.io/jdoro-blog/posts/2024-05-11-declarative-vs-imperative/</guid><description>&lt;p>Have you ever struggled to decipher a complex block of code? Or maybe
+you&amp;rsquo;ve written some code that feels overly long-winded. Understanding the
+difference between imperative and declarative code can be your secret
+weapon in tackling these challenges. This approach shapes how we instruct
+computers to achieve our programming goals, impacting both code readability
+and maintainability.&lt;/p>
+&lt;p>Over the years I&amp;rsquo;ve been gradually spending more time writing declarative
+code, and I&amp;rsquo;ve not only found it to be a more enjoyable experience but also
+a more maintainable one. I&amp;rsquo;ve been able to create more reusable and
+composable chunks of code that can be easily understood by others.&lt;/p></description></item><item><title>Testing With Dependency Injection</title><link>https://jdoro.github.io/jdoro-blog/posts/2024-05-02-dependency-injection/</link><pubDate>Thu, 02 May 2024 00:00:00 +0000</pubDate><guid>https://jdoro.github.io/jdoro-blog/posts/2024-05-02-dependency-injection/</guid><description>&lt;p>Dependency injection (DI) is a software design pattern that might sound complex,
+but it&amp;rsquo;s a powerful tool for writing cleaner, more maintainable code. At its core,
+DI is about separating the creation of an object from its usage. This might seem
+like a minor detail, but it has significant benefits, especially when it comes
+to testing.&lt;/p>
+&lt;h3 id="why-use-dependency-injection">Why Use Dependency Injection?&lt;/h3>
+&lt;p>There are several reasons to embrace DI, but let&amp;rsquo;s focus on two key advantages:&lt;/p></description></item></channel></rss>

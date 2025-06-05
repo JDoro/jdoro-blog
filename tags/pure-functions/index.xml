@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Pure Functions on JDORO.println</title><link>https://jdoro.github.io/jdoro-blog/tags/pure-functions/</link><description>Recent content in Pure Functions on JDORO.println</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Sun, 19 May 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://jdoro.github.io/jdoro-blog/tags/pure-functions/index.xml" rel="self" type="application/rss+xml"/><item><title>Pure Functions Defined</title><link>https://jdoro.github.io/jdoro-blog/posts/2024-05-19-pure-functions/</link><pubDate>Sun, 19 May 2024 00:00:00 +0000</pubDate><guid>https://jdoro.github.io/jdoro-blog/posts/2024-05-19-pure-functions/</guid><description>&lt;p>In the realm of programming, functions are the workhorses. They take input,
+perform an operation, and return an output. But within this seemingly simple
+concept lies a spectrum of function types, each with its own strengths and
+quirks. Today, we&amp;rsquo;ll be diving into the world of &lt;strong>pure functions&lt;/strong>,
+understanding their core principles of &lt;strong>idempotence&lt;/strong> and the absence of
+&lt;strong>side effects&lt;/strong>.&lt;/p>
+&lt;h2 id="pure-and-simple-the-essence-of-a-pure-function">Pure and Simple: The Essence of a Pure Function&lt;/h2>
+&lt;p>A pure function is like a mathematical equation: predictable and reliable. It
+adheres to two key tenets:&lt;/p></description></item></channel></rss>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Windows on JDORO.println</title><link>https://jdoro.github.io/jdoro-blog/tags/windows/</link><description>Recent content in Windows on JDORO.println</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Tue, 28 May 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://jdoro.github.io/jdoro-blog/tags/windows/index.xml" rel="self" type="application/rss+xml"/><item><title>Optimizing Jest Tests for Blazing Fast Feedback on Windows</title><link>https://jdoro.github.io/jdoro-blog/posts/2024-05-28-jest-profiling/</link><pubDate>Tue, 28 May 2024 00:00:00 +0000</pubDate><guid>https://jdoro.github.io/jdoro-blog/posts/2024-05-28-jest-profiling/</guid><description>&lt;p>Jest has become a popular testing framework for JavaScript applications,
+especially those built with React. While it shines on macOS and Linux,
+Windows users can sometimes encounter significant slowdowns. This post
+details how to identify performance bottlenecks in Jest tests on Windows
+and shares techniques to achieve lightning-fast feedback.&lt;/p>
+&lt;h2 id="the-problem-slow-tests-on-windows">The Problem: Slow Tests on Windows&lt;/h2>
+&lt;p>You recently joined a React project and were met with a six-minute wait for
+Jest test results – unacceptable for a smooth development workflow. The
+project, primarily developed on macOS, had only 300 test suites and around
+1,000 individual tests. Investigating further revealed this slowness is a
+known issue for Jest on Windows.&lt;/p></description></item></channel></rss>

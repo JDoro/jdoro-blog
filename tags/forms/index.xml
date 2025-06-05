@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Forms on JDORO.println</title><link>https://jdoro.github.io/jdoro-blog/tags/forms/</link><description>Recent content in Forms on JDORO.println</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Tue, 16 Apr 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://jdoro.github.io/jdoro-blog/tags/forms/index.xml" rel="self" type="application/rss+xml"/><item><title>Taking Control: Controlled vs. Uncontrolled Components in React</title><link>https://jdoro.github.io/jdoro-blog/posts/2024-04-16-controlled-vs-uncontrolled/</link><pubDate>Tue, 16 Apr 2024 00:00:00 +0000</pubDate><guid>https://jdoro.github.io/jdoro-blog/posts/2024-04-16-controlled-vs-uncontrolled/</guid><description>&lt;p>Imagine a car. You, the developer, are firmly behind the wheel (the React state)
+steering the form&amp;rsquo;s behavior. But unlike a car with just one driver, React offers
+two approaches to handling form data: controlled components and uncontrolled
+components. Understanding the distinction between these two is crucial for
+crafting effective and predictable React applications.&lt;/p>
+&lt;p>&lt;strong>Controlled Components: In the Driver&amp;rsquo;s Seat&lt;/strong>&lt;/p>
+&lt;p>In controlled components, the form data, like input values, is managed entirely
+by React&amp;rsquo;s state. Here&amp;rsquo;s how it works:&lt;/p></description></item></channel></rss>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Functional Programming on JDORO.println</title><link>https://jdoro.github.io/jdoro-blog/tags/functional-programming/</link><description>Recent content in Functional Programming on JDORO.println</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Thu, 16 May 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://jdoro.github.io/jdoro-blog/tags/functional-programming/index.xml" rel="self" type="application/rss+xml"/><item><title>Reach Higher with Higher-Order Functions</title><link>https://jdoro.github.io/jdoro-blog/posts/2024-05-16-higher-order-functions/</link><pubDate>Thu, 16 May 2024 00:00:00 +0000</pubDate><guid>https://jdoro.github.io/jdoro-blog/posts/2024-05-16-higher-order-functions/</guid><description>&lt;p>Higher-order functions (HOFs) are a powerful concept in functional programming
+that can take functions as arguments or return them as results. They offer a
+more concise and expressive way to write code, improve readability, and enhance
+code reusability. This blog post will delve into the world of HOFs, exploring
+their benefits, practical applications, and some important considerations.&lt;/p>
+&lt;h2 id="what-is-a-function">What is a Function?&lt;/h2>
+&lt;p>Before we dive into higher-order functions, let&amp;rsquo;s establish a common ground. A
+function is a reusable block of code that performs a specific task. It can take
+inputs (arguments) and return an output (value).&lt;/p></description></item></channel></rss>
