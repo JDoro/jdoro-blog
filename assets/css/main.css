@@ -1,2 +1,12 @@
 @import "tailwindcss";
 @custom-variant dark (&:where(.dark, .dark *));
+
+/* Ensure code blocks do not overflow and are styled nicely */
+@layer components {
+  pre {
+    @apply overflow-x-auto rounded-lg p-4 bg-gray-100 dark:bg-gray-900 text-sm my-4;
+  }
+  code {
+    @apply break-words;
+  }
+}
