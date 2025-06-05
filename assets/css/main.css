@@ -9,16 +9,19 @@
   code {
     @apply break-words;
   }
-  ul, ol {
+}
+
+@layer prose {
+  .prose ul, .prose ol {
     @apply pl-6 my-4;
   }
-  ul {
+  .prose ul {
     @apply list-disc;
   }
-  ol {
+  .prose ol {
     @apply list-decimal;
   }
-  li {
+  .prose li {
     @apply mb-1 leading-relaxed;
   }
 }
