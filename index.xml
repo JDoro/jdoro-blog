@@ -76,7 +76,12 @@ provides a flexible way to build autocomplete components. By using render props,
 Downshift allows you to control the rendering logic while providing the necessary
 state and event handlers. This is a great example use case for render props.
 We want to reuse this logic across different components, but we also want to
-customize the rendering of the component based on our needs.&lt;/p></description></item><item><title>May the 4th Be with you!</title><link>https://jdoro.github.io/jdoro-blog/posts/2024-05-04-may-the-4th-be-with-you/</link><pubDate>Sat, 04 May 2024 00:00:00 +0000</pubDate><guid>https://jdoro.github.io/jdoro-blog/posts/2024-05-04-may-the-4th-be-with-you/</guid><description>&lt;!-- raw HTML omitted -->
+customize the rendering of the component based on our needs.&lt;/p></description></item><item><title>May the 4th Be with you!</title><link>https://jdoro.github.io/jdoro-blog/posts/2024-05-04-may-the-4th-be-with-you/</link><pubDate>Sat, 04 May 2024 00:00:00 +0000</pubDate><guid>https://jdoro.github.io/jdoro-blog/posts/2024-05-04-may-the-4th-be-with-you/</guid><description>&lt;figure class="flex flex-col items-center block">&lt;img src="https://jdoro.github.io/jdoro-blog/posts/2024-05-04-may-the-4th-be-with-you/star-wars.png"
+ alt="May the 4th Be with you!">&lt;figcaption>
+ &lt;h4>May the 4th Be with you!&lt;/h4>
+ &lt;/figcaption>
+&lt;/figure>
+
 &lt;p>This is one of my favorite days of the year! I&amp;rsquo;ve been a massive Star Wars fan
 my entire life. I remember watching the original trilogy with my mom when I was
 a kid, and I&amp;rsquo;ve been hooked ever since.&lt;/p>
@@ -118,6 +123,4 @@ components. Understanding the distinction between these two is crucial for
 crafting effective and predictable React applications.&lt;/p>
 &lt;p>&lt;strong>Controlled Components: In the Driver&amp;rsquo;s Seat&lt;/strong>&lt;/p>
 &lt;p>In controlled components, the form data, like input values, is managed entirely
-by React&amp;rsquo;s state. Here&amp;rsquo;s how it works:&lt;/p></description></item><item><title>First Post!</title><link>https://jdoro.github.io/jdoro-blog/posts/2024-04-13-first-post/</link><pubDate>Sat, 13 Apr 2024 00:00:00 +0000</pubDate><guid>https://jdoro.github.io/jdoro-blog/posts/2024-04-13-first-post/</guid><description>&lt;p>This is the first post from the tutorial to setup a Jekyll blog with github pages.&lt;/p>
-&lt;p>I&amp;rsquo;ve been working and writing in this space for over a decade, and I&amp;rsquo;m
-excited to finally share some of my thoughts and get them out of my head.&lt;/p></description></item><item><title>From Objects to State: A Reactjs Developer's Mindset Shift</title><link>https://jdoro.github.io/jdoro-blog/posts/2024-04-13-objects-to-state/</link><pubDate>Sat, 13 Apr 2024 00:00:00 +0000</pubDate><guid>https://jdoro.github.io/jdoro-blog/posts/2024-04-13-objects-to-state/</guid><description>&lt;p>For many developers coming from an Object-Oriented Programming (OOP) background, the transition to Reactjs development can feel like a paradigm shift. In the OOP world, we&amp;rsquo;re conditioned to think in terms of objects – creating them, manipulating their properties, and calling their methods. This naturally translates to a desire to interact with the UI in a similar way: find the DOM element, access its properties, and call methods to modify its behavior.&lt;/p></description></item></channel></rss>
+by React&amp;rsquo;s state. Here&amp;rsquo;s how it works:&lt;/p></description></item><item><title>From Objects to State: A Reactjs Developer's Mindset Shift</title><link>https://jdoro.github.io/jdoro-blog/posts/2024-04-13-objects-to-state/</link><pubDate>Sat, 13 Apr 2024 00:00:00 +0000</pubDate><guid>https://jdoro.github.io/jdoro-blog/posts/2024-04-13-objects-to-state/</guid><description>&lt;p>For many developers coming from an Object-Oriented Programming (OOP) background, the transition to Reactjs development can feel like a paradigm shift. In the OOP world, we&amp;rsquo;re conditioned to think in terms of objects – creating them, manipulating their properties, and calling their methods. This naturally translates to a desire to interact with the UI in a similar way: find the DOM element, access its properties, and call methods to modify its behavior.&lt;/p></description></item></channel></rss>
