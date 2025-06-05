@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>JDORO.println</title><link>jdoro-blog/</link><description>Recent content on JDORO.println</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Tue, 11 Jun 2024 00:00:00 +0000</lastBuildDate><atom:link href="jdoro-blog/index.xml" rel="self" type="application/rss+xml"/><item><title>React Best Practices: Immutability</title><link>jdoro-blog/posts/2024-06-11-react-immutability/</link><pubDate>Tue, 11 Jun 2024 00:00:00 +0000</pubDate><guid>jdoro-blog/posts/2024-06-11-react-immutability/</guid><description>&lt;p>Immutability is an important concept in React development. Without a solid
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>JDORO.println</title><link>https://jdoro.github.io/jdoro-blog/</link><description>Recent content on JDORO.println</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Tue, 11 Jun 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://jdoro.github.io/jdoro-blog/index.xml" rel="self" type="application/rss+xml"/><item><title>React Best Practices: Immutability</title><link>https://jdoro.github.io/jdoro-blog/posts/2024-06-11-react-immutability/</link><pubDate>Tue, 11 Jun 2024 00:00:00 +0000</pubDate><guid>https://jdoro.github.io/jdoro-blog/posts/2024-06-11-react-immutability/</guid><description>&lt;p>Immutability is an important concept in React development. Without a solid
 understanding of it, you would certainly struggle with state management in your
 React applications. In this blog post, we will explore the concept of
 immutability, its importance in React, and how to apply it effectively in your
@@ -14,14 +14,14 @@ caller of the function can no longer be certain that the object will remain
 unchanged. This can lead to bugs that are difficult to track down.
 Immutability also allows for comparison optimizations by only checking if the
 reference to the object has changed, rather than comparing all the values in the
-entire object.&lt;/p></description></item><item><title>React Best Practices: There can only be one… copy of the state</title><link>jdoro-blog/posts/2024-06-02-react-state-copies/</link><pubDate>Sun, 02 Jun 2024 00:00:00 +0000</pubDate><guid>jdoro-blog/posts/2024-06-02-react-state-copies/</guid><description>&lt;p>In React, state is what makes our components dynamic and responsive. It allows
+entire object.&lt;/p></description></item><item><title>React Best Practices: There can only be one… copy of the state</title><link>https://jdoro.github.io/jdoro-blog/posts/2024-06-02-react-state-copies/</link><pubDate>Sun, 02 Jun 2024 00:00:00 +0000</pubDate><guid>https://jdoro.github.io/jdoro-blog/posts/2024-06-02-react-state-copies/</guid><description>&lt;p>In React, state is what makes our components dynamic and responsive. It allows
 us to hold onto data that can change over time, triggering UI updates when
 needed. However, a common pitfall new React developers encounter is creating
 multiple copies of the same state when they need to transform the data slightly
 or derive new values from the data.&lt;/p>
 &lt;p>&lt;strong>Imagine you&amp;rsquo;re building a product listing page.&lt;/strong> You have a state variable
 holding an array of products, each with a &lt;code>price&lt;/code> property. You want to display
-both the original price and a discounted price (say, 20% off).&lt;/p></description></item><item><title>Optimizing Jest Tests for Blazing Fast Feedback on Windows</title><link>jdoro-blog/posts/2024-05-28-jest-profiling/</link><pubDate>Tue, 28 May 2024 00:00:00 +0000</pubDate><guid>jdoro-blog/posts/2024-05-28-jest-profiling/</guid><description>&lt;p>Jest has become a popular testing framework for JavaScript applications,
+both the original price and a discounted price (say, 20% off).&lt;/p></description></item><item><title>Optimizing Jest Tests for Blazing Fast Feedback on Windows</title><link>https://jdoro.github.io/jdoro-blog/posts/2024-05-28-jest-profiling/</link><pubDate>Tue, 28 May 2024 00:00:00 +0000</pubDate><guid>https://jdoro.github.io/jdoro-blog/posts/2024-05-28-jest-profiling/</guid><description>&lt;p>Jest has become a popular testing framework for JavaScript applications,
 especially those built with React. While it shines on macOS and Linux,
 Windows users can sometimes encounter significant slowdowns. This post
 details how to identify performance bottlenecks in Jest tests on Windows
@@ -31,7 +31,7 @@ and shares techniques to achieve lightning-fast feedback.&lt;/p>
 Jest test results – unacceptable for a smooth development workflow. The
 project, primarily developed on macOS, had only 300 test suites and around
 1,000 individual tests. Investigating further revealed this slowness is a
-known issue for Jest on Windows.&lt;/p></description></item><item><title>Something Fun: WarriorJS</title><link>jdoro-blog/posts/2024-05-22-warriorjs/</link><pubDate>Wed, 22 May 2024 00:00:00 +0000</pubDate><guid>jdoro-blog/posts/2024-05-22-warriorjs/</guid><description>&lt;p>Today&amp;rsquo;s post is a bit different from my usual content on best practices and tips.
+known issue for Jest on Windows.&lt;/p></description></item><item><title>Something Fun: WarriorJS</title><link>https://jdoro.github.io/jdoro-blog/posts/2024-05-22-warriorjs/</link><pubDate>Wed, 22 May 2024 00:00:00 +0000</pubDate><guid>https://jdoro.github.io/jdoro-blog/posts/2024-05-22-warriorjs/</guid><description>&lt;p>Today&amp;rsquo;s post is a bit different from my usual content on best practices and tips.
 I wanted to share a fun game that I&amp;rsquo;ve been playing in the past called
 &lt;a href="https://warrior.js.org/">WarriorJS&lt;/a>. I&amp;rsquo;ve shared this with many friends and
 clients over the last few years and it&amp;rsquo;s always been a hit.&lt;/p>
@@ -40,7 +40,7 @@ gamified environment. You play as a warrior climbing a tower, battling enemies,
 and collecting treasure. The twist? You write JavaScript code to control your
 warrior&amp;rsquo;s actions. The core mechanic is that you must write the logic for one
 &amp;ldquo;turn&amp;rdquo; at a time. You must sense your surroundings and make decisions based
-on the information available to you.&lt;/p></description></item><item><title>Pure Functions Defined</title><link>jdoro-blog/posts/2024-05-19-pure-functions/</link><pubDate>Sun, 19 May 2024 00:00:00 +0000</pubDate><guid>jdoro-blog/posts/2024-05-19-pure-functions/</guid><description>&lt;p>In the realm of programming, functions are the workhorses. They take input,
+on the information available to you.&lt;/p></description></item><item><title>Pure Functions Defined</title><link>https://jdoro.github.io/jdoro-blog/posts/2024-05-19-pure-functions/</link><pubDate>Sun, 19 May 2024 00:00:00 +0000</pubDate><guid>https://jdoro.github.io/jdoro-blog/posts/2024-05-19-pure-functions/</guid><description>&lt;p>In the realm of programming, functions are the workhorses. They take input,
 perform an operation, and return an output. But within this seemingly simple
 concept lies a spectrum of function types, each with its own strengths and
 quirks. Today, we&amp;rsquo;ll be diving into the world of &lt;strong>pure functions&lt;/strong>,
@@ -48,7 +48,7 @@ understanding their core principles of &lt;strong>idempotence&lt;/strong> and th
 &lt;strong>side effects&lt;/strong>.&lt;/p>
 &lt;h2 id="pure-and-simple-the-essence-of-a-pure-function">Pure and Simple: The Essence of a Pure Function&lt;/h2>
 &lt;p>A pure function is like a mathematical equation: predictable and reliable. It
-adheres to two key tenets:&lt;/p></description></item><item><title>Reach Higher with Higher-Order Functions</title><link>jdoro-blog/posts/2024-05-16-higher-order-functions/</link><pubDate>Thu, 16 May 2024 00:00:00 +0000</pubDate><guid>jdoro-blog/posts/2024-05-16-higher-order-functions/</guid><description>&lt;p>Higher-order functions (HOFs) are a powerful concept in functional programming
+adheres to two key tenets:&lt;/p></description></item><item><title>Reach Higher with Higher-Order Functions</title><link>https://jdoro.github.io/jdoro-blog/posts/2024-05-16-higher-order-functions/</link><pubDate>Thu, 16 May 2024 00:00:00 +0000</pubDate><guid>https://jdoro.github.io/jdoro-blog/posts/2024-05-16-higher-order-functions/</guid><description>&lt;p>Higher-order functions (HOFs) are a powerful concept in functional programming
 that can take functions as arguments or return them as results. They offer a
 more concise and expressive way to write code, improve readability, and enhance
 code reusability. This blog post will delve into the world of HOFs, exploring
@@ -56,7 +56,7 @@ their benefits, practical applications, and some important considerations.&lt;/p
 &lt;h2 id="what-is-a-function">What is a Function?&lt;/h2>
 &lt;p>Before we dive into higher-order functions, let&amp;rsquo;s establish a common ground. A
 function is a reusable block of code that performs a specific task. It can take
-inputs (arguments) and return an output (value).&lt;/p></description></item><item><title>Lets Talk Declarative vs Imperative</title><link>jdoro-blog/posts/2024-05-11-declarative-vs-imperative/</link><pubDate>Sat, 11 May 2024 00:00:00 +0000</pubDate><guid>jdoro-blog/posts/2024-05-11-declarative-vs-imperative/</guid><description>&lt;p>Have you ever struggled to decipher a complex block of code? Or maybe
+inputs (arguments) and return an output (value).&lt;/p></description></item><item><title>Lets Talk Declarative vs Imperative</title><link>https://jdoro.github.io/jdoro-blog/posts/2024-05-11-declarative-vs-imperative/</link><pubDate>Sat, 11 May 2024 00:00:00 +0000</pubDate><guid>https://jdoro.github.io/jdoro-blog/posts/2024-05-11-declarative-vs-imperative/</guid><description>&lt;p>Have you ever struggled to decipher a complex block of code? Or maybe
 you&amp;rsquo;ve written some code that feels overly long-winded. Understanding the
 difference between imperative and declarative code can be your secret
 weapon in tackling these challenges. This approach shapes how we instruct
@@ -65,7 +65,7 @@ and maintainability.&lt;/p>
 &lt;p>Over the years I&amp;rsquo;ve been gradually spending more time writing declarative
 code, and I&amp;rsquo;ve not only found it to be a more enjoyable experience but also
 a more maintainable one. I&amp;rsquo;ve been able to create more reusable and
-composable chunks of code that can be easily understood by others.&lt;/p></description></item><item><title>Render props for reusable component logic in React</title><link>jdoro-blog/posts/2024-05-08-render-props/</link><pubDate>Wed, 08 May 2024 00:00:00 +0000</pubDate><guid>jdoro-blog/posts/2024-05-08-render-props/</guid><description>&lt;p>Render props are a powerful design pattern in React that enables you to
+composable chunks of code that can be easily understood by others.&lt;/p></description></item><item><title>Render props for reusable component logic in React</title><link>https://jdoro.github.io/jdoro-blog/posts/2024-05-08-render-props/</link><pubDate>Wed, 08 May 2024 00:00:00 +0000</pubDate><guid>https://jdoro.github.io/jdoro-blog/posts/2024-05-08-render-props/</guid><description>&lt;p>Render props are a powerful design pattern in React that enables you to
 pass a function as a prop to a component. This function, often named
 &lt;code>render&lt;/code>, dictates the content and rendering logic within the receiving
 component. This pattern shines in scenarios where you need to share
@@ -76,19 +76,19 @@ provides a flexible way to build autocomplete components. By using render props,
 Downshift allows you to control the rendering logic while providing the necessary
 state and event handlers. This is a great example use case for render props.
 We want to reuse this logic across different components, but we also want to
-customize the rendering of the component based on our needs.&lt;/p></description></item><item><title>May the 4th Be with you!</title><link>jdoro-blog/posts/2024-05-04-may-the-4th-be-with-you/</link><pubDate>Sat, 04 May 2024 00:00:00 +0000</pubDate><guid>jdoro-blog/posts/2024-05-04-may-the-4th-be-with-you/</guid><description>&lt;!-- raw HTML omitted -->
+customize the rendering of the component based on our needs.&lt;/p></description></item><item><title>May the 4th Be with you!</title><link>https://jdoro.github.io/jdoro-blog/posts/2024-05-04-may-the-4th-be-with-you/</link><pubDate>Sat, 04 May 2024 00:00:00 +0000</pubDate><guid>https://jdoro.github.io/jdoro-blog/posts/2024-05-04-may-the-4th-be-with-you/</guid><description>&lt;!-- raw HTML omitted -->
 &lt;p>This is one of my favorite days of the year! I&amp;rsquo;ve been a massive Star Wars fan
 my entire life. I remember watching the original trilogy with my mom when I was
 a kid, and I&amp;rsquo;ve been hooked ever since.&lt;/p>
 &lt;p>&lt;strong>I even have a tattoo of the Rebel Alliance symbol on my arm!&lt;/strong>&lt;/p>
 &lt;p>The stories and characters are near and dear to my heart and I constantly bring
-them into my daily life and software development.&lt;/p></description></item><item><title>Testing With Dependency Injection</title><link>jdoro-blog/posts/2024-05-02-dependency-injection/</link><pubDate>Thu, 02 May 2024 00:00:00 +0000</pubDate><guid>jdoro-blog/posts/2024-05-02-dependency-injection/</guid><description>&lt;p>Dependency injection (DI) is a software design pattern that might sound complex,
+them into my daily life and software development.&lt;/p></description></item><item><title>Testing With Dependency Injection</title><link>https://jdoro.github.io/jdoro-blog/posts/2024-05-02-dependency-injection/</link><pubDate>Thu, 02 May 2024 00:00:00 +0000</pubDate><guid>https://jdoro.github.io/jdoro-blog/posts/2024-05-02-dependency-injection/</guid><description>&lt;p>Dependency injection (DI) is a software design pattern that might sound complex,
 but it&amp;rsquo;s a powerful tool for writing cleaner, more maintainable code. At its core,
 DI is about separating the creation of an object from its usage. This might seem
 like a minor detail, but it has significant benefits, especially when it comes
 to testing.&lt;/p>
 &lt;h3 id="why-use-dependency-injection">Why Use Dependency Injection?&lt;/h3>
-&lt;p>There are several reasons to embrace DI, but let&amp;rsquo;s focus on two key advantages:&lt;/p></description></item><item><title>React Best Practices: Minimizing Side Effects in Your React Components</title><link>jdoro-blog/posts/2024-04-27-react-useeffect-antipatterns/</link><pubDate>Sat, 27 Apr 2024 00:00:00 +0000</pubDate><guid>jdoro-blog/posts/2024-04-27-react-useeffect-antipatterns/</guid><description>&lt;p>While the &lt;code>useEffect&lt;/code> hook is a powerful tool in React&amp;rsquo;s arsenal, it requires
+&lt;p>There are several reasons to embrace DI, but let&amp;rsquo;s focus on two key advantages:&lt;/p></description></item><item><title>React Best Practices: Minimizing Side Effects in Your React Components</title><link>https://jdoro.github.io/jdoro-blog/posts/2024-04-27-react-useeffect-antipatterns/</link><pubDate>Sat, 27 Apr 2024 00:00:00 +0000</pubDate><guid>https://jdoro.github.io/jdoro-blog/posts/2024-04-27-react-useeffect-antipatterns/</guid><description>&lt;p>While the &lt;code>useEffect&lt;/code> hook is a powerful tool in React&amp;rsquo;s arsenal, it requires
 careful handling to avoid unintended consequences. It allows us to control
 side effects that need to be handled at different points within the React
 lifecycle. This post explores common anti-patterns with &lt;code>useEffect&lt;/code> and
@@ -96,13 +96,13 @@ emphasizes keeping your components lean and state updates controlled.&lt;/p>
 &lt;h3 id="why-less-useeffect-is-often-more">Why Less &lt;code>useEffect&lt;/code> is Often More&lt;/h3>
 &lt;p>React components render based on their state. By minimizing the use of
 &lt;code>useEffect&lt;/code> for side effects, you achieve a cleaner separation of concerns and
-potentially improve performance:&lt;/p></description></item><item><title>Jest Mock Factories</title><link>jdoro-blog/posts/2024-04-25-jest-mock-factories/</link><pubDate>Thu, 25 Apr 2024 00:00:00 +0000</pubDate><guid>jdoro-blog/posts/2024-04-25-jest-mock-factories/</guid><description>&lt;p>One of the best features of the testing framework Jest is its built-in support
+potentially improve performance:&lt;/p></description></item><item><title>Jest Mock Factories</title><link>https://jdoro.github.io/jdoro-blog/posts/2024-04-25-jest-mock-factories/</link><pubDate>Thu, 25 Apr 2024 00:00:00 +0000</pubDate><guid>https://jdoro.github.io/jdoro-blog/posts/2024-04-25-jest-mock-factories/</guid><description>&lt;p>One of the best features of the testing framework Jest is its built-in support
 for mocking imports. There is a full suite of helper functions and utilities that
 make it very easy to completely mock an imported file with very little effort.&lt;/p>
 &lt;p>Jest accomplishes this by rebuilding an entire registry of every module in the
 dependency tree of everything you import into the test file. This happens once
 per test suite/file. This can be pretty expensive and slow if you have a lot of
-test suites or files with a lot of imports.&lt;/p></description></item><item><title>Special Props in ReactJS</title><link>jdoro-blog/posts/2024-04-22-special-react-props/</link><pubDate>Mon, 22 Apr 2024 00:00:00 +0000</pubDate><guid>jdoro-blog/posts/2024-04-22-special-react-props/</guid><description>&lt;p>In ReactJS, props are a cornerstone for communication between components.
+test suites or files with a lot of imports.&lt;/p></description></item><item><title>Special Props in ReactJS</title><link>https://jdoro.github.io/jdoro-blog/posts/2024-04-22-special-react-props/</link><pubDate>Mon, 22 Apr 2024 00:00:00 +0000</pubDate><guid>https://jdoro.github.io/jdoro-blog/posts/2024-04-22-special-react-props/</guid><description>&lt;p>In ReactJS, props are a cornerstone for communication between components.
 While most props are custom attributes you define to configure a component&amp;rsquo;s
 behavior, there are two special props that React itself uses for internal
 purposes: &lt;code>key&lt;/code> and &lt;code>ref&lt;/code>.&lt;/p>
@@ -111,13 +111,13 @@ purposes: &lt;code>key&lt;/code> and &lt;code>ref&lt;/code>.&lt;/p>
 &lt;p>&lt;strong>&lt;code>key&lt;/code> prop&lt;/strong>: This prop is used by React to identify unique items within a
 list of elements. It&amp;rsquo;s essential for optimizing performance when rendering
 lists that change dynamically. The key prop should be a unique identifier
-for each item, such as an ID from your data source.&lt;/p></description></item><item><title>Taking Control: Controlled vs. Uncontrolled Components in React</title><link>jdoro-blog/posts/2024-04-16-controlled-vs-uncontrolled/</link><pubDate>Tue, 16 Apr 2024 00:00:00 +0000</pubDate><guid>jdoro-blog/posts/2024-04-16-controlled-vs-uncontrolled/</guid><description>&lt;p>Imagine a car. You, the developer, are firmly behind the wheel (the React state)
+for each item, such as an ID from your data source.&lt;/p></description></item><item><title>Taking Control: Controlled vs. Uncontrolled Components in React</title><link>https://jdoro.github.io/jdoro-blog/posts/2024-04-16-controlled-vs-uncontrolled/</link><pubDate>Tue, 16 Apr 2024 00:00:00 +0000</pubDate><guid>https://jdoro.github.io/jdoro-blog/posts/2024-04-16-controlled-vs-uncontrolled/</guid><description>&lt;p>Imagine a car. You, the developer, are firmly behind the wheel (the React state)
 steering the form&amp;rsquo;s behavior. But unlike a car with just one driver, React offers
 two approaches to handling form data: controlled components and uncontrolled
 components. Understanding the distinction between these two is crucial for
 crafting effective and predictable React applications.&lt;/p>
 &lt;p>&lt;strong>Controlled Components: In the Driver&amp;rsquo;s Seat&lt;/strong>&lt;/p>
 &lt;p>In controlled components, the form data, like input values, is managed entirely
-by React&amp;rsquo;s state. Here&amp;rsquo;s how it works:&lt;/p></description></item><item><title>First Post!</title><link>jdoro-blog/posts/2024-04-13-first-post/</link><pubDate>Sat, 13 Apr 2024 00:00:00 +0000</pubDate><guid>jdoro-blog/posts/2024-04-13-first-post/</guid><description>&lt;p>This is the first post from the tutorial to setup a Jekyll blog with github pages.&lt;/p>
+by React&amp;rsquo;s state. Here&amp;rsquo;s how it works:&lt;/p></description></item><item><title>First Post!</title><link>https://jdoro.github.io/jdoro-blog/posts/2024-04-13-first-post/</link><pubDate>Sat, 13 Apr 2024 00:00:00 +0000</pubDate><guid>https://jdoro.github.io/jdoro-blog/posts/2024-04-13-first-post/</guid><description>&lt;p>This is the first post from the tutorial to setup a Jekyll blog with github pages.&lt;/p>
 &lt;p>I&amp;rsquo;ve been working and writing in this space for over a decade, and I&amp;rsquo;m
-excited to finally share some of my thoughts and get them out of my head.&lt;/p></description></item><item><title>From Objects to State: A Reactjs Developer's Mindset Shift</title><link>jdoro-blog/posts/2024-04-13-objects-to-state/</link><pubDate>Sat, 13 Apr 2024 00:00:00 +0000</pubDate><guid>jdoro-blog/posts/2024-04-13-objects-to-state/</guid><description>&lt;p>For many developers coming from an Object-Oriented Programming (OOP) background, the transition to Reactjs development can feel like a paradigm shift. In the OOP world, we&amp;rsquo;re conditioned to think in terms of objects – creating them, manipulating their properties, and calling their methods. This naturally translates to a desire to interact with the UI in a similar way: find the DOM element, access its properties, and call methods to modify its behavior.&lt;/p></description></item></channel></rss>
+excited to finally share some of my thoughts and get them out of my head.&lt;/p></description></item><item><title>From Objects to State: A Reactjs Developer's Mindset Shift</title><link>https://jdoro.github.io/jdoro-blog/posts/2024-04-13-objects-to-state/</link><pubDate>Sat, 13 Apr 2024 00:00:00 +0000</pubDate><guid>https://jdoro.github.io/jdoro-blog/posts/2024-04-13-objects-to-state/</guid><description>&lt;p>For many developers coming from an Object-Oriented Programming (OOP) background, the transition to Reactjs development can feel like a paradigm shift. In the OOP world, we&amp;rsquo;re conditioned to think in terms of objects – creating them, manipulating their properties, and calling their methods. This naturally translates to a desire to interact with the UI in a similar way: find the DOM element, access its properties, and call methods to modify its behavior.&lt;/p></description></item></channel></rss>
