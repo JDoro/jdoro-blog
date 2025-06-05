@@ -1,6 +1,10 @@
 ---
 title: "Taking Control: Controlled vs. Uncontrolled Components in React"
 date: 2024-04-16
+draft: false
+description: "A practical guide to understanding controlled and uncontrolled components in React forms."
+tags: ["reactjs", "forms", "javascript"]
+categories: ["reactjs"]
 ---
 
 Imagine a car. You, the developer, are firmly behind the wheel (the React state)

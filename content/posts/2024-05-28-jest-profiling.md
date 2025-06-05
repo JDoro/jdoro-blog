@@ -1,6 +1,10 @@
 ---
 title: "Optimizing Jest Tests for Blazing Fast Feedback on Windows"
 date: 2024-05-28
+draft: false
+description: "How to profile and optimize Jest tests for better performance on Windows."
+tags: ["jest", "testing", "performance", "windows"]
+categories: ["testing"]
 ---
 
 Jest has become a popular testing framework for JavaScript applications, 
@@ -31,16 +35,16 @@ and locate the Jest process under "Target." Click "inspect" to open the
 developer tools window for the Jest process.
 
 <div style="display: flex;justify-content: center">
-    <img alt="Chrome DevTools Inspect Jest Process" 
-        src="/jdoro-blog/assets/images/chrome-inspect-page.png"/>
+    <img alt="Chrome DevTools Inspect Jest Process"
+        src="/assets/images/chrome-inspect-page.png"/>
 </div>
 
 3. **Start Profiling:**  In the DevTools window, go to the "Profiles" tab and 
 click "Start."
 
 <div style="display: flex;justify-content: center">
-    <img alt="Chrome DevTools Profiling" 
-        src="/jdoro-blog/assets/images/chrome-profile-start.png"/>
+    <img alt="Chrome DevTools Profiling"
+        src="/assets/images/chrome-profile-start.png"/>
 </div>
 
 4. **Run the Tests:**  Monitor the terminal where Jest is running. Once the 
@@ -57,8 +61,8 @@ module registry for each test suite. It traverses the dependency tree of
 every imported file, which can be time-consuming.
 
 <div style="display: flex;justify-content: center">
-    <img alt="Profile Output Showing Slow Tests" 
-        src="/jdoro-blog/assets/images/jest-profile-output-before.png"/>
+    <img alt="Profile Output Showing Slow Tests"
+        src="/assets/images/jest-profile-output-before.png"/>
 </div>
 
 ## Mocking to the Rescue
@@ -78,8 +82,8 @@ allowing you to define specific mocks for each dependency. This significantly
 reduced the module registry build time, as seen in the profile comparison.
 
 <div style="display: flex;justify-content: center">
-    <img alt="Profile Output Showing Improved Tests" 
-        src="/jdoro-blog/assets/images/jest-profile-output-after.png"/>
+    <img alt="Profile Output Showing Improved Tests"
+        src="/assets/images/jest-profile-output-after.png"/>
 </div>
 
 Now you can see, through the scale at the top, that both the red and blue 

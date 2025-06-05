@@ -1,6 +1,10 @@
 ---
 title: "Lets Talk Declarative vs Imperative"
 date: 2024-05-11
+draft: false
+description: "A comparison of declarative and imperative programming styles, with practical examples."
+tags: ["declarative", "imperative", "programming", "javascript"]
+categories: ["software design"]
 ---
 
 Have you ever struggled to decipher a complex block of code? Or maybe 

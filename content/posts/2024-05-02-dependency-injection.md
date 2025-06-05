@@ -1,6 +1,10 @@
 ---
 title: "Testing With Dependency Injection"
 date: 2024-05-02
+draft: false
+description: "A practical introduction to dependency injection for easier testing and maintainable code."
+tags: ["dependency injection", "testing", "design patterns"]
+categories: ["software design"]
 ---
 
 Dependency injection (DI) is a software design pattern that might sound complex, 

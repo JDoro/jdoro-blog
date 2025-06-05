@@ -1,6 +1,10 @@
 ---
 title: "Special Props in ReactJS"
 date: 2024-04-22
+draft: false
+description: "An overview of the special key and ref props in ReactJS and how to use them effectively."
+tags: ["reactjs", "javascript"]
+categories: ["reactjs"]
 ---
 
 In ReactJS, props are a cornerstone for communication between components. 

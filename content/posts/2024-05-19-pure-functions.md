@@ -1,6 +1,10 @@
 ---
 title: "Pure Functions Defined"
 date: 2024-05-19
+draft: false
+description: "A deep dive into pure functions, idempotence, and side effects in programming."
+tags: ["pure functions", "idempotence", "side effects", "javascript"]
+categories: ["software design"]
 ---
 
 

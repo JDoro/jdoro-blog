@@ -1,6 +1,10 @@
 ---
 title: "From Objects to State: A Reactjs Developer's Mindset Shift"
 date: 2024-04-13
+draft: false
+description: "A look at how React developers shift from object-oriented thinking to state-driven UI design."
+tags: ["reactjs", "state", "javascript"]
+categories: ["reactjs"]
 ---
 
 For many developers coming from an Object-Oriented Programming (OOP) background, the transition to Reactjs development can feel like a paradigm shift. In the OOP world, we're conditioned to think in terms of objects – creating them, manipulating their properties, and calling their methods. This naturally translates to a desire to interact with the UI in a similar way: find the DOM element, access its properties, and call methods to modify its behavior.

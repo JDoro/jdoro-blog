@@ -1,6 +1,10 @@
 ---
 title: "React Best Practices: Minimizing Side Effects in Your React Components"
 date: 2024-04-27
+draft: false
+description: "Common anti-patterns with useEffect and how to keep your React components clean."
+tags: ["reactjs", "best practices", "javascript"]
+categories: ["reactjs"]
 ---
 
 While the `useEffect` hook is a powerful tool in React's arsenal, it requires 

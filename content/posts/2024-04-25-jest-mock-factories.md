@@ -1,6 +1,10 @@
 ---
 title: "Jest Mock Factories"
 date: 2024-04-25
+draft: false
+description: "How to use Jest mock factories for flexible and powerful test mocking."
+tags: ["jest", "testing", "mocks", "javascript"]
+categories: ["testing"]
 ---
 
 One of the best features of the testing framework Jest is its built-in support 

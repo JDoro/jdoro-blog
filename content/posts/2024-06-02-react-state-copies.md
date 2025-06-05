@@ -1,6 +1,10 @@
 ---
 title: "React Best Practices: There can only be one… copy of the state"
 date: 2024-06-02
+draft: false
+description: "Why you should avoid multiple copies of state in React and how to derive data properly."
+tags: ["reactjs", "state", "best practices", "javascript"]
+categories: ["reactjs"]
 ---
 
 In React, state is what makes our components dynamic and responsive. It allows

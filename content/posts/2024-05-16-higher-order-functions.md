@@ -1,6 +1,10 @@
 ---
 title: "Reach Higher with Higher-Order Functions"
 date: 2024-05-16
+draft: false
+description: "An introduction to higher-order functions in JavaScript and their practical uses."
+tags: ["javascript", "higher-order functions", "functional programming"]
+categories: ["software design"]
 ---
 
 Higher-order functions (HOFs) are a powerful concept in functional programming 

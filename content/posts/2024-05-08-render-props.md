@@ -1,6 +1,10 @@
 ---
 title: "Render props for reusable component logic in React"
 date: 2024-05-08
+draft: false
+description: "How to use the render props pattern for reusable logic in React components."
+tags: ["reactjs", "patterns", "javascript"]
+categories: ["reactjs"]
 ---
 
 Render props are a powerful design pattern in React that enables you to

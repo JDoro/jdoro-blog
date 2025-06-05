@@ -1,6 +1,10 @@
 ---
 title: "Something Fun: WarriorJS"
 date: 2024-05-22
+draft: false
+description: "A fun introduction to WarriorJS, a game for learning JavaScript through coding challenges."
+tags: ["warriorjs", "javascript", "game", "learning"]
+categories: ["fun"]
 ---
 
 Today's post is a bit different from my usual content on best practices and tips. 

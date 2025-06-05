@@ -1,6 +1,10 @@
 ---
 title: "React Best Practices: Immutability"
 date: 2024-06-11
+draft: false
+description: "A guide to understanding and applying immutability in React for better state management."
+tags: ["reactjs", "immutability", "state", "best practices"]
+categories: ["reactjs"]
 ---
 
 Immutability is an important concept in React development. Without a solid
@@ -127,4 +131,4 @@ if you are changing a value or replacing a value.
 Immutability is not a concept exclusive to react either. give it a try in
 your Java or C# or Python code. Other languages may not make it as easy or
 clean looking but just thinking about immutability can help you write better
-code. Especially when dealing with concurrency. 
+code. Especially when dealing with concurrency.
