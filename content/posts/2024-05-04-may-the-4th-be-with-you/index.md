@@ -1,11 +1,13 @@
 ---
 title: "May the 4th Be with you!"
 date: 2024-05-04
+draft: false
+description: "A Star Wars fan's celebration and a look at the Star Wars API (swapi)."
+tags: ["star wars", "fun", "api"]
+categories: ["meta"]
 ---
 
-<div style="display: flex;justify-content: center">
-    <img alt="May the 4th Be with you!" src="/jdoro-blog/assets/images/star-wars.png"/>
-</div>
+{{< figure src="star-wars.png" alt="May the 4th Be with you!" title="May the 4th Be with you!" class="flex flex-col items-center block" >}}
 
 This is one of my favorite days of the year! I've been a massive Star Wars fan 
 my entire life. I remember watching the original trilogy with my mom when I was
