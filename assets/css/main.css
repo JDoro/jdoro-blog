@@ -9,4 +9,16 @@
   code {
     @apply break-words;
   }
+  ul, ol {
+    @apply pl-6 my-4;
+  }
+  ul {
+    @apply list-disc;
+  }
+  ol {
+    @apply list-decimal;
+  }
+  li {
+    @apply mb-1 leading-relaxed;
+  }
 }
