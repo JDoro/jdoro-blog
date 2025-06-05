@@ -34,19 +34,13 @@ pausing at the first line.
 and locate the Jest process under "Target." Click "inspect" to open the 
 developer tools window for the Jest process.
 
-<div style="display: flex;justify-content: center">
-    <img alt="Chrome DevTools Inspect Jest Process"
-        src="/assets/images/chrome-inspect-page.png"/>
-</div>
+{{< figure src="chrome-inspect-page.png" alt="Chrome DevTools Inspect Jest Process" title="Chrome DevTools Inspect Jest Process" >}}
 
 3. **Start Profiling:**  In the DevTools window, go to the "Profiles" tab and 
 click "Start."
 
-<div style="display: flex;justify-content: center">
-    <img alt="Chrome DevTools Profiling"
-        src="/assets/images/chrome-profile-start.png"/>
-</div>
-
+{{< figure src="chrome-profile-start.png" alt="Chrome DevTools Profiling" title="Chrome DevTools Profiling" >}}
+ 
 4. **Run the Tests:**  Monitor the terminal where Jest is running. Once the 
 tests finish, switch back to DevTools and click "Stop" in the Profiles tab.
 
@@ -60,10 +54,7 @@ and is unaffected by your code.
 module registry for each test suite. It traverses the dependency tree of 
 every imported file, which can be time-consuming.
 
-<div style="display: flex;justify-content: center">
-    <img alt="Profile Output Showing Slow Tests"
-        src="/assets/images/jest-profile-output-before.png"/>
-</div>
+{{< figure src="jest-profile-output-before.png" alt="Profile Output Showing Slow Tests" title="Profile Output Showing Slow Tests" >}}
 
 ## Mocking to the Rescue
 
@@ -81,10 +72,7 @@ needs to mock.
 allowing you to define specific mocks for each dependency. This significantly 
 reduced the module registry build time, as seen in the profile comparison.
 
-<div style="display: flex;justify-content: center">
-    <img alt="Profile Output Showing Improved Tests"
-        src="/assets/images/jest-profile-output-after.png"/>
-</div>
+{{< figure src="jest-profile-output-after.png" alt="Profile Output Showing Improved Tests" title="Profile Output Showing Improved Tests" >}}
 
 Now you can see, through the scale at the top, that both the red and blue 
 circles have shrunk, indicating a faster test setup and module registry.
@@ -113,3 +101,4 @@ Remember, well-performing tests provide valuable feedback and keep
 development cycles efficient. By understanding Jest's behavior on Windows 
 and implementing these optimization techniques, you can achieve a 
 blazing-fast testing experience.
+
