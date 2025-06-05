@@ -20,12 +20,12 @@ profile Jest tests using Chrome DevTools:</p><ol><li><strong>Run Jest with Debug
 <code>node</code> command when running Jest. This puts the tests in debug mode,
 pausing at the first line.</li><li><strong>Open Chrome DevTools:</strong> Navigate to <code>chrome://inspect/</code> in Chrome
 and locate the Jest process under &ldquo;Target.&rdquo; Click &ldquo;inspect&rdquo; to open the
-developer tools window for the Jest process.</li></ol><ol start=3><li><strong>Start Profiling:</strong> In the DevTools window, go to the &ldquo;Profiles&rdquo; tab and
-click &ldquo;Start.&rdquo;</li></ol><ol start=4><li><strong>Run the Tests:</strong> Monitor the terminal where Jest is running. Once the
+developer tools window for the Jest process.</li></ol><figure><img src=/jdoro-blog/posts/2024-05-28-jest-profiling/chrome-inspect-page.png alt="Chrome DevTools Inspect Jest Process"><figcaption><h4>Chrome DevTools Inspect Jest Process</h4></figcaption></figure><ol start=3><li><strong>Start Profiling:</strong> In the DevTools window, go to the &ldquo;Profiles&rdquo; tab and
+click &ldquo;Start.&rdquo;</li></ol><figure><img src=/jdoro-blog/posts/2024-05-28-jest-profiling/chrome-profile-start.png alt="Chrome DevTools Profiling"><figcaption><h4>Chrome DevTools Profiling</h4></figcaption></figure><ol start=4><li><strong>Run the Tests:</strong> Monitor the terminal where Jest is running. Once the
 tests finish, switch back to DevTools and click &ldquo;Stop&rdquo; in the Profiles tab.</li></ol><h2 id=analyzing-the-profile>Analyzing the Profile</h2><p>The initial profile revealed two key areas:</p><ul><li><strong>Jest Setup (Red Circle):</strong> This section represents Jest&rsquo;s internal setup
 and is unaffected by your code.</li><li><strong>Module Registry (Blue Circle):</strong> This part reflects Jest building the
 module registry for each test suite. It traverses the dependency tree of
-every imported file, which can be time-consuming.</li></ul><h2 id=mocking-to-the-rescue>Mocking to the Rescue</h2><p>One of Jest&rsquo;s strengths is built-in mocking, but it comes at a cost. Jest
+every imported file, which can be time-consuming.</li></ul><figure><img src=/jdoro-blog/posts/2024-05-28-jest-profiling/jest-profile-output-before.png alt="Profile Output Showing Slow Tests"><figcaption><h4>Profile Output Showing Slow Tests</h4></figcaption></figure><h2 id=mocking-to-the-rescue>Mocking to the Rescue</h2><p>One of Jest&rsquo;s strengths is built-in mocking, but it comes at a cost. Jest
 rebuilds the module registry for every test suite. To minimize this overhead,
 you implemented two mocking strategies:</p><ol><li><strong>Isolating Dependencies (Failed):</strong> Initially, lets try Jest&rsquo;s
 <code>jest.mock({{insert module path here}})</code> syntax to auto-mock dependencies.
@@ -34,7 +34,7 @@ needs to build the module registry to understand the exposed interface it
 needs to mock.</li><li><strong>Manual Mocking (Success):</strong> introducing Jest&rsquo;s mock factory syntax
 <code>jest.mock({{insert module path here}}, () => { return { foo: jest.func() } })</code>,
 allowing you to define specific mocks for each dependency. This significantly
-reduced the module registry build time, as seen in the profile comparison.</li></ol><p>Now you can see, through the scale at the top, that both the red and blue
+reduced the module registry build time, as seen in the profile comparison.</li></ol><figure><img src=/jdoro-blog/posts/2024-05-28-jest-profiling/jest-profile-output-after.png alt="Profile Output Showing Improved Tests"><figcaption><h4>Profile Output Showing Improved Tests</h4></figcaption></figure><p>Now you can see, through the scale at the top, that both the red and blue
 circles have shrunk, indicating a faster test setup and module registry.</p><h2 id=beyond-mocking-test-efficiency>Beyond Mocking: Test Efficiency</h2><p>While mocking helped, another performance pitfall was identified:
 bringing in unnecessary dependencies just for testing. Focusing on writing
 lean, efficient tests that target the core functionality can further improve
