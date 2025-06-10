@@ -26,9 +26,8 @@ const baseUrl = 'https://jdoro.github.io/jdoro-blog/posts/';
 test.describe('blog post navigation', () => {
   postSlugs.forEach(slug => {
     test(`can navigate to blog post: ${slug}`, async ({ page }) => {
-      await page.goto(`${baseUrl}${slug}/`);
-      const notFound = await page.locator('text=404').count();
-      expect(notFound).toBe(0);
+      const response = await page.goto(`${baseUrl}${slug}/`);
+      expect(response.status()).not.toBe(404);
       const hasTitle = await page.locator('h2, h1').first().isVisible();
       expect(hasTitle).toBeTruthy();
     });
