@@ -1,10 +1,10 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Reactjs on JDORO.println</title><link>https://jdoro.github.io/jdoro-blog/tags/reactjs/</link><description>Recent content in Reactjs on JDORO.println</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Tue, 11 Jun 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://jdoro.github.io/jdoro-blog/tags/reactjs/index.xml" rel="self" type="application/rss+xml"/><item><title>React Best Practices: Immutability</title><link>https://jdoro.github.io/jdoro-blog/posts/2024-06-11-react-immutability/</link><pubDate>Tue, 11 Jun 2024 00:00:00 +0000</pubDate><guid>https://jdoro.github.io/jdoro-blog/posts/2024-06-11-react-immutability/</guid><description>&lt;p>Immutability is an important concept in React development. Without a solid
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Reactjs on JDORO.println</title><link>https://jdoro.github.io/jdoro-blog/tags/reactjs/</link><description>Recent content in Reactjs on JDORO.println</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Tue, 11 Jun 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://jdoro.github.io/jdoro-blog/tags/reactjs/index.xml" rel="self" type="application/rss+xml"/><item><title>React Best Practices: Immutability</title><link>https://jdoro.github.io/jdoro-blog/posts/2024-06-11-react-immutability/</link><pubDate>Tue, 11 Jun 2024 00:00:00 +0000</pubDate><guid>https://jdoro.github.io/jdoro-blog/posts/2024-06-11-react-immutability/</guid><description>&lt;p&gt;Immutability is an important concept in React development. Without a solid
 understanding of it, you would certainly struggle with state management in your
 React applications. In this blog post, we will explore the concept of
 immutability, its importance in React, and how to apply it effectively in your
-projects.&lt;/p>
-&lt;h2 id="what-is-immutability">What is Immutability?&lt;/h2>
-&lt;p>Immutability is the ability of an objects value to be changed after it;s&lt;br>
+projects.&lt;/p&gt;
+&lt;h2 id="what-is-immutability"&gt;What is Immutability?&lt;/h2&gt;
+&lt;p&gt;Immutability is the ability of an objects value to be changed after it;s&lt;br&gt;
 been created. In simpler terms, once an object is created, its value cannot be
 changed. If you want to &amp;ldquo;change&amp;rdquo; the object you need to create a new object with
 the desired changes. Employing immutability in your application helps you
@@ -14,46 +14,46 @@ caller of the function can no longer be certain that the object will remain
 unchanged. This can lead to bugs that are difficult to track down.
 Immutability also allows for comparison optimizations by only checking if the
 reference to the object has changed, rather than comparing all the values in the
-entire object.&lt;/p></description></item><item><title>React Best Practices: There can only be one… copy of the state</title><link>https://jdoro.github.io/jdoro-blog/posts/2024-06-02-react-state-copies/</link><pubDate>Sun, 02 Jun 2024 00:00:00 +0000</pubDate><guid>https://jdoro.github.io/jdoro-blog/posts/2024-06-02-react-state-copies/</guid><description>&lt;p>In React, state is what makes our components dynamic and responsive. It allows
+entire object.&lt;/p&gt;</description></item><item><title>React Best Practices: There can only be one… copy of the state</title><link>https://jdoro.github.io/jdoro-blog/posts/2024-06-02-react-state-copies/</link><pubDate>Sun, 02 Jun 2024 00:00:00 +0000</pubDate><guid>https://jdoro.github.io/jdoro-blog/posts/2024-06-02-react-state-copies/</guid><description>&lt;p&gt;In React, state is what makes our components dynamic and responsive. It allows
 us to hold onto data that can change over time, triggering UI updates when
 needed. However, a common pitfall new React developers encounter is creating
 multiple copies of the same state when they need to transform the data slightly
-or derive new values from the data.&lt;/p>
-&lt;p>&lt;strong>Imagine you&amp;rsquo;re building a product listing page.&lt;/strong> You have a state variable
-holding an array of products, each with a &lt;code>price&lt;/code> property. You want to display
-both the original price and a discounted price (say, 20% off).&lt;/p></description></item><item><title>Render props for reusable component logic in React</title><link>https://jdoro.github.io/jdoro-blog/posts/2024-05-08-render-props/</link><pubDate>Wed, 08 May 2024 00:00:00 +0000</pubDate><guid>https://jdoro.github.io/jdoro-blog/posts/2024-05-08-render-props/</guid><description>&lt;p>Render props are a powerful design pattern in React that enables you to
+or derive new values from the data.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Imagine you&amp;rsquo;re building a product listing page.&lt;/strong&gt; You have a state variable
+holding an array of products, each with a &lt;code&gt;price&lt;/code&gt; property. You want to display
+both the original price and a discounted price (say, 20% off).&lt;/p&gt;</description></item><item><title>Render props for reusable component logic in React</title><link>https://jdoro.github.io/jdoro-blog/posts/2024-05-08-render-props/</link><pubDate>Wed, 08 May 2024 00:00:00 +0000</pubDate><guid>https://jdoro.github.io/jdoro-blog/posts/2024-05-08-render-props/</guid><description>&lt;p&gt;Render props are a powerful design pattern in React that enables you to
 pass a function as a prop to a component. This function, often named
-&lt;code>render&lt;/code>, dictates the content and rendering logic within the receiving
+&lt;code&gt;render&lt;/code&gt;, dictates the content and rendering logic within the receiving
 component. This pattern shines in scenarios where you need to share
-common functionality while allowing customization of the visual presentation.&lt;/p>
-&lt;p>The render props pattern became popular with the
-&lt;a href="https://github.com/downshift-js/downshift">Downshift&lt;/a> library, which
+common functionality while allowing customization of the visual presentation.&lt;/p&gt;
+&lt;p&gt;The render props pattern became popular with the
+&lt;a href="https://github.com/downshift-js/downshift"&gt;Downshift&lt;/a&gt; library, which
 provides a flexible way to build autocomplete components. By using render props,
 Downshift allows you to control the rendering logic while providing the necessary
 state and event handlers. This is a great example use case for render props.
 We want to reuse this logic across different components, but we also want to
-customize the rendering of the component based on our needs.&lt;/p></description></item><item><title>React Best Practices: Minimizing Side Effects in Your React Components</title><link>https://jdoro.github.io/jdoro-blog/posts/2024-04-27-react-useeffect-antipatterns/</link><pubDate>Sat, 27 Apr 2024 00:00:00 +0000</pubDate><guid>https://jdoro.github.io/jdoro-blog/posts/2024-04-27-react-useeffect-antipatterns/</guid><description>&lt;p>While the &lt;code>useEffect&lt;/code> hook is a powerful tool in React&amp;rsquo;s arsenal, it requires
+customize the rendering of the component based on our needs.&lt;/p&gt;</description></item><item><title>React Best Practices: Minimizing Side Effects in Your React Components</title><link>https://jdoro.github.io/jdoro-blog/posts/2024-04-27-react-useeffect-antipatterns/</link><pubDate>Sat, 27 Apr 2024 00:00:00 +0000</pubDate><guid>https://jdoro.github.io/jdoro-blog/posts/2024-04-27-react-useeffect-antipatterns/</guid><description>&lt;p&gt;While the &lt;code&gt;useEffect&lt;/code&gt; hook is a powerful tool in React&amp;rsquo;s arsenal, it requires
 careful handling to avoid unintended consequences. It allows us to control
 side effects that need to be handled at different points within the React
-lifecycle. This post explores common anti-patterns with &lt;code>useEffect&lt;/code> and
-emphasizes keeping your components lean and state updates controlled.&lt;/p>
-&lt;h3 id="why-less-useeffect-is-often-more">Why Less &lt;code>useEffect&lt;/code> is Often More&lt;/h3>
-&lt;p>React components render based on their state. By minimizing the use of
-&lt;code>useEffect&lt;/code> for side effects, you achieve a cleaner separation of concerns and
-potentially improve performance:&lt;/p></description></item><item><title>Special Props in ReactJS</title><link>https://jdoro.github.io/jdoro-blog/posts/2024-04-22-special-react-props/</link><pubDate>Mon, 22 Apr 2024 00:00:00 +0000</pubDate><guid>https://jdoro.github.io/jdoro-blog/posts/2024-04-22-special-react-props/</guid><description>&lt;p>In ReactJS, props are a cornerstone for communication between components.
+lifecycle. This post explores common anti-patterns with &lt;code&gt;useEffect&lt;/code&gt; and
+emphasizes keeping your components lean and state updates controlled.&lt;/p&gt;
+&lt;h3 id="why-less-useeffect-is-often-more"&gt;Why Less &lt;code&gt;useEffect&lt;/code&gt; is Often More&lt;/h3&gt;
+&lt;p&gt;React components render based on their state. By minimizing the use of
+&lt;code&gt;useEffect&lt;/code&gt; for side effects, you achieve a cleaner separation of concerns and
+potentially improve performance:&lt;/p&gt;</description></item><item><title>Special Props in ReactJS</title><link>https://jdoro.github.io/jdoro-blog/posts/2024-04-22-special-react-props/</link><pubDate>Mon, 22 Apr 2024 00:00:00 +0000</pubDate><guid>https://jdoro.github.io/jdoro-blog/posts/2024-04-22-special-react-props/</guid><description>&lt;p&gt;In ReactJS, props are a cornerstone for communication between components.
 While most props are custom attributes you define to configure a component&amp;rsquo;s
 behavior, there are two special props that React itself uses for internal
-purposes: &lt;code>key&lt;/code> and &lt;code>ref&lt;/code>.&lt;/p>
-&lt;ul>
-&lt;li>
-&lt;p>&lt;strong>&lt;code>key&lt;/code> prop&lt;/strong>: This prop is used by React to identify unique items within a
+purposes: &lt;code&gt;key&lt;/code&gt; and &lt;code&gt;ref&lt;/code&gt;.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code&gt;key&lt;/code&gt; prop&lt;/strong&gt;: This prop is used by React to identify unique items within a
 list of elements. It&amp;rsquo;s essential for optimizing performance when rendering
 lists that change dynamically. The key prop should be a unique identifier
-for each item, such as an ID from your data source.&lt;/p></description></item><item><title>Taking Control: Controlled vs. Uncontrolled Components in React</title><link>https://jdoro.github.io/jdoro-blog/posts/2024-04-16-controlled-vs-uncontrolled/</link><pubDate>Tue, 16 Apr 2024 00:00:00 +0000</pubDate><guid>https://jdoro.github.io/jdoro-blog/posts/2024-04-16-controlled-vs-uncontrolled/</guid><description>&lt;p>Imagine a car. You, the developer, are firmly behind the wheel (the React state)
+for each item, such as an ID from your data source.&lt;/p&gt;</description></item><item><title>Taking Control: Controlled vs. Uncontrolled Components in React</title><link>https://jdoro.github.io/jdoro-blog/posts/2024-04-16-controlled-vs-uncontrolled/</link><pubDate>Tue, 16 Apr 2024 00:00:00 +0000</pubDate><guid>https://jdoro.github.io/jdoro-blog/posts/2024-04-16-controlled-vs-uncontrolled/</guid><description>&lt;p&gt;Imagine a car. You, the developer, are firmly behind the wheel (the React state)
 steering the form&amp;rsquo;s behavior. But unlike a car with just one driver, React offers
 two approaches to handling form data: controlled components and uncontrolled
 components. Understanding the distinction between these two is crucial for
-crafting effective and predictable React applications.&lt;/p>
-&lt;p>&lt;strong>Controlled Components: In the Driver&amp;rsquo;s Seat&lt;/strong>&lt;/p>
-&lt;p>In controlled components, the form data, like input values, is managed entirely
-by React&amp;rsquo;s state. Here&amp;rsquo;s how it works:&lt;/p></description></item><item><title>From Objects to State: A Reactjs Developer's Mindset Shift</title><link>https://jdoro.github.io/jdoro-blog/posts/2024-04-13-objects-to-state/</link><pubDate>Sat, 13 Apr 2024 00:00:00 +0000</pubDate><guid>https://jdoro.github.io/jdoro-blog/posts/2024-04-13-objects-to-state/</guid><description>&lt;p>For many developers coming from an Object-Oriented Programming (OOP) background, the transition to Reactjs development can feel like a paradigm shift. In the OOP world, we&amp;rsquo;re conditioned to think in terms of objects – creating them, manipulating their properties, and calling their methods. This naturally translates to a desire to interact with the UI in a similar way: find the DOM element, access its properties, and call methods to modify its behavior.&lt;/p></description></item></channel></rss>
+crafting effective and predictable React applications.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Controlled Components: In the Driver&amp;rsquo;s Seat&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;In controlled components, the form data, like input values, is managed entirely
+by React&amp;rsquo;s state. Here&amp;rsquo;s how it works:&lt;/p&gt;</description></item><item><title>From Objects to State: A Reactjs Developer's Mindset Shift</title><link>https://jdoro.github.io/jdoro-blog/posts/2024-04-13-objects-to-state/</link><pubDate>Sat, 13 Apr 2024 00:00:00 +0000</pubDate><guid>https://jdoro.github.io/jdoro-blog/posts/2024-04-13-objects-to-state/</guid><description>&lt;p&gt;For many developers coming from an Object-Oriented Programming (OOP) background, the transition to Reactjs development can feel like a paradigm shift. In the OOP world, we&amp;rsquo;re conditioned to think in terms of objects – creating them, manipulating their properties, and calling their methods. This naturally translates to a desire to interact with the UI in a similar way: find the DOM element, access its properties, and call methods to modify its behavior.&lt;/p&gt;</description></item></channel></rss>

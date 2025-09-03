@@ -1,12 +1,12 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Patterns on JDORO.println</title><link>https://jdoro.github.io/jdoro-blog/tags/patterns/</link><description>Recent content in Patterns on JDORO.println</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Wed, 08 May 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://jdoro.github.io/jdoro-blog/tags/patterns/index.xml" rel="self" type="application/rss+xml"/><item><title>Render props for reusable component logic in React</title><link>https://jdoro.github.io/jdoro-blog/posts/2024-05-08-render-props/</link><pubDate>Wed, 08 May 2024 00:00:00 +0000</pubDate><guid>https://jdoro.github.io/jdoro-blog/posts/2024-05-08-render-props/</guid><description>&lt;p>Render props are a powerful design pattern in React that enables you to
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Patterns on JDORO.println</title><link>https://jdoro.github.io/jdoro-blog/tags/patterns/</link><description>Recent content in Patterns on JDORO.println</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Wed, 08 May 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://jdoro.github.io/jdoro-blog/tags/patterns/index.xml" rel="self" type="application/rss+xml"/><item><title>Render props for reusable component logic in React</title><link>https://jdoro.github.io/jdoro-blog/posts/2024-05-08-render-props/</link><pubDate>Wed, 08 May 2024 00:00:00 +0000</pubDate><guid>https://jdoro.github.io/jdoro-blog/posts/2024-05-08-render-props/</guid><description>&lt;p&gt;Render props are a powerful design pattern in React that enables you to
 pass a function as a prop to a component. This function, often named
-&lt;code>render&lt;/code>, dictates the content and rendering logic within the receiving
+&lt;code&gt;render&lt;/code&gt;, dictates the content and rendering logic within the receiving
 component. This pattern shines in scenarios where you need to share
-common functionality while allowing customization of the visual presentation.&lt;/p>
-&lt;p>The render props pattern became popular with the
-&lt;a href="https://github.com/downshift-js/downshift">Downshift&lt;/a> library, which
+common functionality while allowing customization of the visual presentation.&lt;/p&gt;
+&lt;p&gt;The render props pattern became popular with the
+&lt;a href="https://github.com/downshift-js/downshift"&gt;Downshift&lt;/a&gt; library, which
 provides a flexible way to build autocomplete components. By using render props,
 Downshift allows you to control the rendering logic while providing the necessary
 state and event handlers. This is a great example use case for render props.
 We want to reuse this logic across different components, but we also want to
-customize the rendering of the component based on our needs.&lt;/p></description></item></channel></rss>
+customize the rendering of the component based on our needs.&lt;/p&gt;</description></item></channel></rss>

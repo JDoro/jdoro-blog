@@ -1,10 +1,10 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Best Practices on JDORO.println</title><link>https://jdoro.github.io/jdoro-blog/tags/best-practices/</link><description>Recent content in Best Practices on JDORO.println</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Tue, 11 Jun 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://jdoro.github.io/jdoro-blog/tags/best-practices/index.xml" rel="self" type="application/rss+xml"/><item><title>React Best Practices: Immutability</title><link>https://jdoro.github.io/jdoro-blog/posts/2024-06-11-react-immutability/</link><pubDate>Tue, 11 Jun 2024 00:00:00 +0000</pubDate><guid>https://jdoro.github.io/jdoro-blog/posts/2024-06-11-react-immutability/</guid><description>&lt;p>Immutability is an important concept in React development. Without a solid
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Best Practices on JDORO.println</title><link>https://jdoro.github.io/jdoro-blog/tags/best-practices/</link><description>Recent content in Best Practices on JDORO.println</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Tue, 11 Jun 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://jdoro.github.io/jdoro-blog/tags/best-practices/index.xml" rel="self" type="application/rss+xml"/><item><title>React Best Practices: Immutability</title><link>https://jdoro.github.io/jdoro-blog/posts/2024-06-11-react-immutability/</link><pubDate>Tue, 11 Jun 2024 00:00:00 +0000</pubDate><guid>https://jdoro.github.io/jdoro-blog/posts/2024-06-11-react-immutability/</guid><description>&lt;p&gt;Immutability is an important concept in React development. Without a solid
 understanding of it, you would certainly struggle with state management in your
 React applications. In this blog post, we will explore the concept of
 immutability, its importance in React, and how to apply it effectively in your
-projects.&lt;/p>
-&lt;h2 id="what-is-immutability">What is Immutability?&lt;/h2>
-&lt;p>Immutability is the ability of an objects value to be changed after it;s&lt;br>
+projects.&lt;/p&gt;
+&lt;h2 id="what-is-immutability"&gt;What is Immutability?&lt;/h2&gt;
+&lt;p&gt;Immutability is the ability of an objects value to be changed after it;s&lt;br&gt;
 been created. In simpler terms, once an object is created, its value cannot be
 changed. If you want to &amp;ldquo;change&amp;rdquo; the object you need to create a new object with
 the desired changes. Employing immutability in your application helps you
@@ -14,19 +14,19 @@ caller of the function can no longer be certain that the object will remain
 unchanged. This can lead to bugs that are difficult to track down.
 Immutability also allows for comparison optimizations by only checking if the
 reference to the object has changed, rather than comparing all the values in the
-entire object.&lt;/p></description></item><item><title>React Best Practices: There can only be one… copy of the state</title><link>https://jdoro.github.io/jdoro-blog/posts/2024-06-02-react-state-copies/</link><pubDate>Sun, 02 Jun 2024 00:00:00 +0000</pubDate><guid>https://jdoro.github.io/jdoro-blog/posts/2024-06-02-react-state-copies/</guid><description>&lt;p>In React, state is what makes our components dynamic and responsive. It allows
+entire object.&lt;/p&gt;</description></item><item><title>React Best Practices: There can only be one… copy of the state</title><link>https://jdoro.github.io/jdoro-blog/posts/2024-06-02-react-state-copies/</link><pubDate>Sun, 02 Jun 2024 00:00:00 +0000</pubDate><guid>https://jdoro.github.io/jdoro-blog/posts/2024-06-02-react-state-copies/</guid><description>&lt;p&gt;In React, state is what makes our components dynamic and responsive. It allows
 us to hold onto data that can change over time, triggering UI updates when
 needed. However, a common pitfall new React developers encounter is creating
 multiple copies of the same state when they need to transform the data slightly
-or derive new values from the data.&lt;/p>
-&lt;p>&lt;strong>Imagine you&amp;rsquo;re building a product listing page.&lt;/strong> You have a state variable
-holding an array of products, each with a &lt;code>price&lt;/code> property. You want to display
-both the original price and a discounted price (say, 20% off).&lt;/p></description></item><item><title>React Best Practices: Minimizing Side Effects in Your React Components</title><link>https://jdoro.github.io/jdoro-blog/posts/2024-04-27-react-useeffect-antipatterns/</link><pubDate>Sat, 27 Apr 2024 00:00:00 +0000</pubDate><guid>https://jdoro.github.io/jdoro-blog/posts/2024-04-27-react-useeffect-antipatterns/</guid><description>&lt;p>While the &lt;code>useEffect&lt;/code> hook is a powerful tool in React&amp;rsquo;s arsenal, it requires
+or derive new values from the data.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Imagine you&amp;rsquo;re building a product listing page.&lt;/strong&gt; You have a state variable
+holding an array of products, each with a &lt;code&gt;price&lt;/code&gt; property. You want to display
+both the original price and a discounted price (say, 20% off).&lt;/p&gt;</description></item><item><title>React Best Practices: Minimizing Side Effects in Your React Components</title><link>https://jdoro.github.io/jdoro-blog/posts/2024-04-27-react-useeffect-antipatterns/</link><pubDate>Sat, 27 Apr 2024 00:00:00 +0000</pubDate><guid>https://jdoro.github.io/jdoro-blog/posts/2024-04-27-react-useeffect-antipatterns/</guid><description>&lt;p&gt;While the &lt;code&gt;useEffect&lt;/code&gt; hook is a powerful tool in React&amp;rsquo;s arsenal, it requires
 careful handling to avoid unintended consequences. It allows us to control
 side effects that need to be handled at different points within the React
-lifecycle. This post explores common anti-patterns with &lt;code>useEffect&lt;/code> and
-emphasizes keeping your components lean and state updates controlled.&lt;/p>
-&lt;h3 id="why-less-useeffect-is-often-more">Why Less &lt;code>useEffect&lt;/code> is Often More&lt;/h3>
-&lt;p>React components render based on their state. By minimizing the use of
-&lt;code>useEffect&lt;/code> for side effects, you achieve a cleaner separation of concerns and
-potentially improve performance:&lt;/p></description></item></channel></rss>
+lifecycle. This post explores common anti-patterns with &lt;code&gt;useEffect&lt;/code&gt; and
+emphasizes keeping your components lean and state updates controlled.&lt;/p&gt;
+&lt;h3 id="why-less-useeffect-is-often-more"&gt;Why Less &lt;code&gt;useEffect&lt;/code&gt; is Often More&lt;/h3&gt;
+&lt;p&gt;React components render based on their state. By minimizing the use of
+&lt;code&gt;useEffect&lt;/code&gt; for side effects, you achieve a cleaner separation of concerns and
+potentially improve performance:&lt;/p&gt;</description></item></channel></rss>

@@ -1,10 +1,10 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Imperative on JDORO.println</title><link>https://jdoro.github.io/jdoro-blog/tags/imperative/</link><description>Recent content in Imperative on JDORO.println</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Sat, 11 May 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://jdoro.github.io/jdoro-blog/tags/imperative/index.xml" rel="self" type="application/rss+xml"/><item><title>Lets Talk Declarative vs Imperative</title><link>https://jdoro.github.io/jdoro-blog/posts/2024-05-11-declarative-vs-imperative/</link><pubDate>Sat, 11 May 2024 00:00:00 +0000</pubDate><guid>https://jdoro.github.io/jdoro-blog/posts/2024-05-11-declarative-vs-imperative/</guid><description>&lt;p>Have you ever struggled to decipher a complex block of code? Or maybe
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Imperative on JDORO.println</title><link>https://jdoro.github.io/jdoro-blog/tags/imperative/</link><description>Recent content in Imperative on JDORO.println</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Sat, 11 May 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://jdoro.github.io/jdoro-blog/tags/imperative/index.xml" rel="self" type="application/rss+xml"/><item><title>Lets Talk Declarative vs Imperative</title><link>https://jdoro.github.io/jdoro-blog/posts/2024-05-11-declarative-vs-imperative/</link><pubDate>Sat, 11 May 2024 00:00:00 +0000</pubDate><guid>https://jdoro.github.io/jdoro-blog/posts/2024-05-11-declarative-vs-imperative/</guid><description>&lt;p&gt;Have you ever struggled to decipher a complex block of code? Or maybe
 you&amp;rsquo;ve written some code that feels overly long-winded. Understanding the
 difference between imperative and declarative code can be your secret
 weapon in tackling these challenges. This approach shapes how we instruct
 computers to achieve our programming goals, impacting both code readability
-and maintainability.&lt;/p>
-&lt;p>Over the years I&amp;rsquo;ve been gradually spending more time writing declarative
+and maintainability.&lt;/p&gt;
+&lt;p&gt;Over the years I&amp;rsquo;ve been gradually spending more time writing declarative
 code, and I&amp;rsquo;ve not only found it to be a more enjoyable experience but also
 a more maintainable one. I&amp;rsquo;ve been able to create more reusable and
-composable chunks of code that can be easily understood by others.&lt;/p></description></item></channel></rss>
+composable chunks of code that can be easily understood by others.&lt;/p&gt;</description></item></channel></rss>

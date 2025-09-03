@@ -1,10 +1,10 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Learning on JDORO.println</title><link>https://jdoro.github.io/jdoro-blog/tags/learning/</link><description>Recent content in Learning on JDORO.println</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Wed, 22 May 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://jdoro.github.io/jdoro-blog/tags/learning/index.xml" rel="self" type="application/rss+xml"/><item><title>Something Fun: WarriorJS</title><link>https://jdoro.github.io/jdoro-blog/posts/2024-05-22-warriorjs/</link><pubDate>Wed, 22 May 2024 00:00:00 +0000</pubDate><guid>https://jdoro.github.io/jdoro-blog/posts/2024-05-22-warriorjs/</guid><description>&lt;p>Today&amp;rsquo;s post is a bit different from my usual content on best practices and tips.
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Learning on JDORO.println</title><link>https://jdoro.github.io/jdoro-blog/tags/learning/</link><description>Recent content in Learning on JDORO.println</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Wed, 22 May 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://jdoro.github.io/jdoro-blog/tags/learning/index.xml" rel="self" type="application/rss+xml"/><item><title>Something Fun: WarriorJS</title><link>https://jdoro.github.io/jdoro-blog/posts/2024-05-22-warriorjs/</link><pubDate>Wed, 22 May 2024 00:00:00 +0000</pubDate><guid>https://jdoro.github.io/jdoro-blog/posts/2024-05-22-warriorjs/</guid><description>&lt;p&gt;Today&amp;rsquo;s post is a bit different from my usual content on best practices and tips.
 I wanted to share a fun game that I&amp;rsquo;ve been playing in the past called
-&lt;a href="https://warrior.js.org/">WarriorJS&lt;/a>. I&amp;rsquo;ve shared this with many friends and
-clients over the last few years and it&amp;rsquo;s always been a hit.&lt;/p>
-&lt;p>This game is a fun way to learn JavaScript and programming concepts in a
+&lt;a href="https://warrior.js.org/"&gt;WarriorJS&lt;/a&gt;. I&amp;rsquo;ve shared this with many friends and
+clients over the last few years and it&amp;rsquo;s always been a hit.&lt;/p&gt;
+&lt;p&gt;This game is a fun way to learn JavaScript and programming concepts in a
 gamified environment. You play as a warrior climbing a tower, battling enemies,
 and collecting treasure. The twist? You write JavaScript code to control your
 warrior&amp;rsquo;s actions. The core mechanic is that you must write the logic for one
 &amp;ldquo;turn&amp;rdquo; at a time. You must sense your surroundings and make decisions based
-on the information available to you.&lt;/p></description></item></channel></rss>
+on the information available to you.&lt;/p&gt;</description></item></channel></rss>

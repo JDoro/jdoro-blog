@@ -1,23 +1,23 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Testing on JDORO.println</title><link>https://jdoro.github.io/jdoro-blog/tags/testing/</link><description>Recent content in Testing on JDORO.println</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Tue, 28 May 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://jdoro.github.io/jdoro-blog/tags/testing/index.xml" rel="self" type="application/rss+xml"/><item><title>Optimizing Jest Tests for Blazing Fast Feedback on Windows</title><link>https://jdoro.github.io/jdoro-blog/posts/2024-05-28-jest-profiling/</link><pubDate>Tue, 28 May 2024 00:00:00 +0000</pubDate><guid>https://jdoro.github.io/jdoro-blog/posts/2024-05-28-jest-profiling/</guid><description>&lt;p>Jest has become a popular testing framework for JavaScript applications,
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Testing on JDORO.println</title><link>https://jdoro.github.io/jdoro-blog/tags/testing/</link><description>Recent content in Testing on JDORO.println</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Tue, 28 May 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://jdoro.github.io/jdoro-blog/tags/testing/index.xml" rel="self" type="application/rss+xml"/><item><title>Optimizing Jest Tests for Blazing Fast Feedback on Windows</title><link>https://jdoro.github.io/jdoro-blog/posts/2024-05-28-jest-profiling/</link><pubDate>Tue, 28 May 2024 00:00:00 +0000</pubDate><guid>https://jdoro.github.io/jdoro-blog/posts/2024-05-28-jest-profiling/</guid><description>&lt;p&gt;Jest has become a popular testing framework for JavaScript applications,
 especially those built with React. While it shines on macOS and Linux,
 Windows users can sometimes encounter significant slowdowns. This post
 details how to identify performance bottlenecks in Jest tests on Windows
-and shares techniques to achieve lightning-fast feedback.&lt;/p>
-&lt;h2 id="the-problem-slow-tests-on-windows">The Problem: Slow Tests on Windows&lt;/h2>
-&lt;p>You recently joined a React project and were met with a six-minute wait for
+and shares techniques to achieve lightning-fast feedback.&lt;/p&gt;
+&lt;h2 id="the-problem-slow-tests-on-windows"&gt;The Problem: Slow Tests on Windows&lt;/h2&gt;
+&lt;p&gt;You recently joined a React project and were met with a six-minute wait for
 Jest test results – unacceptable for a smooth development workflow. The
 project, primarily developed on macOS, had only 300 test suites and around
 1,000 individual tests. Investigating further revealed this slowness is a
-known issue for Jest on Windows.&lt;/p></description></item><item><title>Testing With Dependency Injection</title><link>https://jdoro.github.io/jdoro-blog/posts/2024-05-02-dependency-injection/</link><pubDate>Thu, 02 May 2024 00:00:00 +0000</pubDate><guid>https://jdoro.github.io/jdoro-blog/posts/2024-05-02-dependency-injection/</guid><description>&lt;p>Dependency injection (DI) is a software design pattern that might sound complex,
+known issue for Jest on Windows.&lt;/p&gt;</description></item><item><title>Testing With Dependency Injection</title><link>https://jdoro.github.io/jdoro-blog/posts/2024-05-02-dependency-injection/</link><pubDate>Thu, 02 May 2024 00:00:00 +0000</pubDate><guid>https://jdoro.github.io/jdoro-blog/posts/2024-05-02-dependency-injection/</guid><description>&lt;p&gt;Dependency injection (DI) is a software design pattern that might sound complex,
 but it&amp;rsquo;s a powerful tool for writing cleaner, more maintainable code. At its core,
 DI is about separating the creation of an object from its usage. This might seem
 like a minor detail, but it has significant benefits, especially when it comes
-to testing.&lt;/p>
-&lt;h3 id="why-use-dependency-injection">Why Use Dependency Injection?&lt;/h3>
-&lt;p>There are several reasons to embrace DI, but let&amp;rsquo;s focus on two key advantages:&lt;/p></description></item><item><title>Jest Mock Factories</title><link>https://jdoro.github.io/jdoro-blog/posts/2024-04-25-jest-mock-factories/</link><pubDate>Thu, 25 Apr 2024 00:00:00 +0000</pubDate><guid>https://jdoro.github.io/jdoro-blog/posts/2024-04-25-jest-mock-factories/</guid><description>&lt;p>One of the best features of the testing framework Jest is its built-in support
+to testing.&lt;/p&gt;
+&lt;h3 id="why-use-dependency-injection"&gt;Why Use Dependency Injection?&lt;/h3&gt;
+&lt;p&gt;There are several reasons to embrace DI, but let&amp;rsquo;s focus on two key advantages:&lt;/p&gt;</description></item><item><title>Jest Mock Factories</title><link>https://jdoro.github.io/jdoro-blog/posts/2024-04-25-jest-mock-factories/</link><pubDate>Thu, 25 Apr 2024 00:00:00 +0000</pubDate><guid>https://jdoro.github.io/jdoro-blog/posts/2024-04-25-jest-mock-factories/</guid><description>&lt;p&gt;One of the best features of the testing framework Jest is its built-in support
 for mocking imports. There is a full suite of helper functions and utilities that
-make it very easy to completely mock an imported file with very little effort.&lt;/p>
-&lt;p>Jest accomplishes this by rebuilding an entire registry of every module in the
+make it very easy to completely mock an imported file with very little effort.&lt;/p&gt;
+&lt;p&gt;Jest accomplishes this by rebuilding an entire registry of every module in the
 dependency tree of everything you import into the test file. This happens once
 per test suite/file. This can be pretty expensive and slow if you have a lot of
-test suites or files with a lot of imports.&lt;/p></description></item></channel></rss>
+test suites or files with a lot of imports.&lt;/p&gt;</description></item></channel></rss>
